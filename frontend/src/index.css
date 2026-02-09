@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  /* Custom scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-gray-100 rounded-full;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded-full hover:bg-gray-400;
+  }
+
+  /* Solid professional backgrounds - no gradients */
+  .gradient-primary {
+    @apply bg-primary-600;
+  }
+
+  .gradient-success {
+    @apply bg-success-500;
+  }
+
+  .gradient-warning {
+    @apply bg-warning-500;
+  }
+
+  .gradient-danger {
+    @apply bg-danger-500;
+  }
+
+  /* Clean card style */
+  .glass {
+    @apply bg-white border border-gray-200 shadow-sm;
+  }
+
+  /* Professional text - no animated gradients */
+  .gradient-text {
+    @apply text-primary-700;
+  }
+}
+
+/* Loading skeleton animation */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.skeleton {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(to right, #f3f4f6 4%, #e5e7eb 25%, #f3f4f6 36%);
+  background-size: 1000px 100%;
+}
+
+/* Typewriter effect */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typewriter-cursor::after {
+  content: '|';
+  animation: blink 1s infinite;
+}

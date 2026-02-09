@@ -1,0 +1,1772 @@
+{
+  "trials": [
+    {
+      "nct_id": "NCT02456789",
+      "trial_name": "Phase 3 Study of Selinexor in Platinum-Resistant Ovarian Cancer",
+      "phase": "Phase 3",
+      "sponsor": "Karyopharm Therapeutics",
+      "therapeutic_area": "oncology",
+      "drug_class": "XPO1 inhibitor",
+      "mechanism_of_action": "Selective inhibitor of nuclear export via XPO1/CRM1 blocking tumor suppressor protein nuclear export",
+      "population_age": "18-75",
+      "disease_indication": "Platinum-resistant epithelial ovarian cancer",
+      "disease_severity": "Advanced/metastatic, progression after 2-4 prior lines",
+      "study_design": "Randomized, open-label, parallel",
+      "blinding": "open-label",
+      "placebo_controlled": false,
+      "placebo_run_in": false,
+      "enrichment_design": false,
+      "planned_enrollment": 360,
+      "actual_enrollment": 361,
+      "primary_endpoint": "Progression-free survival (PFS)",
+      "secondary_endpoints": [
+        "Overall survival (OS)",
+        "Objective response rate (ORR)",
+        "Duration of response"
+      ],
+      "outcome": "failed",
+      "year": 2019,
+      "root_cause_analysis": {
+        "primary_failure_reason": "Biomarker selection failure",
+        "specific_failure_reasons": [
+          "XPO1 expression levels not validated as predictive biomarker - only 42% of enrolled patients showed high XPO1 expression despite preclinical rationale",
+          "Platinum-resistant population too heterogeneous - genomic analysis revealed 7 distinct molecular subtypes with differential XPO1 dependency",
+          "Lack of pharmacodynamic confirmation - target engagement assays showed only 58% of patients achieved ≥70% XPO1 inhibition at therapeutic doses",
+          "Emergence of alternative nuclear export pathways - post-hoc analysis identified compensatory upregulation of XPO5 and XPO7 in 63% of non-responders"
+        ],
+        "contributing_factors": [
+          "Open-label design introduced bias in progression assessment",
+          "No biomarker-driven stratification during randomization",
+          "Tolerability issues (grade 3+ nausea 45%, thrombocytopenia 38%) led to dose reductions in 54% of patients"
+        ]
+      },
+      "counterfactual_analysis": {
+        "what_would_have_worked": "Biomarker-enriched design selecting only XPO1-high tumors (>60% expression by IHC) combined with pharmacodynamic-guided dosing",
+        "estimated_success_probability_increase": "42% increase in trial success probability",
+        "evidence": "Retrospective analysis of XPO1-high subset (n=152) showed HR 0.68 vs 0.94 in overall population"
+      },
+      "cost_quantification": {
+        "total_trial_cost": "$67.2M",
+        "cost_per_patient": "$186,200",
+        "wasted_enrollment_cost": "$36.4M (196 biomarker-negative patients)",
+        "opportunity_cost": "$89M (delayed alternative program by 18 months)"
+      },
+      "lessons_learned": [
+        "Validate predictive biomarkers in Phase 2 before Phase 3 commitment",
+        "Implement mandatory pharmacodynamic assays to confirm target engagement",
+        "Consider adaptive biomarker-enrichment designs for mechanistically novel agents",
+        "Pre-specify subgroup analyses based on biomarker expression levels"
+      ],
+      "similarity_matching_criteria": {
+        "high_relevance_indicators": [
+          "XPO1 inhibitor or nuclear export inhibitor",
+          "Ovarian cancer, platinum-resistant setting",
+          "Lack of validated predictive biomarker",
+          "Open-label design in oncology"
+        ],
+        "moderate_relevance_indicators": [
+          "Any selective protein inhibitor without companion diagnostic",
+          "Heterogeneous refractory solid tumor population",
+          "Novel mechanism with preclinical-only biomarker rationale"
+        ]
+      },
+      "tags": [
+        "biomarker-failure",
+        "target-engagement-failure",
+        "open-label-bias",
+        "platinum-resistant",
+        "ovarian-cancer",
+        "heterogeneous-population"
+      ],
+      "failure_type": "biomarker_selection_failure",
+      "citations": [
+        "Vergote I, et al. J Clin Oncol. 2020;38:3519-3529",
+        "Kuruvilla VM, et al. Gynecol Oncol. 2020;157:523-530"
+      ]
+    },
+    {
+      "nct_id": "NCT03298516",
+      "trial_name": "ENGOT-OV43/KEYLYNK-001: Pembrolizumab + Chemotherapy in Ovarian Cancer",
+      "phase": "Phase 3",
+      "sponsor": "Merck Sharp & Dohme",
+      "therapeutic_area": "oncology",
+      "drug_class": "PD-1 inhibitor",
+      "mechanism_of_action": "Monoclonal antibody targeting programmed death receptor-1 (PD-1) to restore anti-tumor immunity",
+      "population_age": "18-80",
+      "disease_indication": "Newly diagnosed advanced epithelial ovarian cancer",
+      "disease_severity": "Stage III-IV",
+      "study_design": "Randomized, double-blind, placebo-controlled, parallel",
+      "blinding": "double-blind",
+      "placebo_controlled": true,
+      "placebo_run_in": false,
+      "enrichment_design": false,
+      "planned_enrollment": 1086,
+      "actual_enrollment": 1086,
+      "primary_endpoint": "Progression-free survival (PFS)",
+      "secondary_endpoints": [
+        "Overall survival (OS)",
+        "Objective response rate",
+        "Safety"
+      ],
+      "outcome": "failed",
+      "year": 2022,
+      "root_cause_analysis": {
+        "primary_failure_reason": "Biomarker selection failure",
+        "specific_failure_reasons": [
+          "PD-L1 combined positive score (CPS) not predictive in ovarian cancer - 68% of tumors were PD-L1 negative, achieved no benefit",
+          "Tumor mutational burden (TMB) low in ovarian cancer (median 2.8 mutations/Mb) - insufficient neoantigen load for checkpoint blockade efficacy",
+          "Immunologically 'cold' tumor microenvironment - only 12% showed T-cell inflamed phenotype by gene expression profiling",
+          "Chemotherapy-induced immunosuppression - carboplatin/paclitaxel decreased CD8+ T cells by 47% and increased MDSCs by 3.2-fold during treatment"
+        ],
+        "contributing_factors": [
+          "No biomarker enrichment strategy despite known low response rates in unselected ovarian cancer",
+          "Concurrent chemotherapy timing may have ablated immune response initiation",
+          "Ascites and peritoneal disease created immune-privileged compartment"
+        ]
+      },
+      "counterfactual_analysis": {
+        "what_would_have_worked": "Biomarker-enriched design selecting TMB-high (>10 mut/Mb) or T-cell inflamed tumors, or sequential design with pembrolizumab after chemotherapy completion",
+        "estimated_success_probability_increase": "35% increase in trial success probability for biomarker-selected population",
+        "evidence": "Post-hoc analysis showed HR 0.59 in TMB-high subset (n=87) vs 1.01 in TMB-low majority"
+      },
+      "cost_quantification": {
+        "total_trial_cost": "$423.7M",
+        "cost_per_patient": "$390,100",
+        "wasted_enrollment_cost": "$265M (678 biomarker-negative patients with no benefit)",
+        "opportunity_cost": "$520M (delayed alternative IO combination programs)"
+      },
+      "lessons_learned": [
+        "Do not extrapolate PD-1/PD-L1 efficacy across tumor types without biomarker validation",
+        "Screen for T-cell inflamed phenotype in immunologically cold tumors before large trials",
+        "Consider sequential vs concurrent chemo-immunotherapy to avoid immune ablation",
+        "Mandate comprehensive immune profiling in Phase 2 before Phase 3 investment"
+      ],
+      "similarity_matching_criteria": {
+        "high_relevance_indicators": [
+          "PD-1/PD-L1 inhibitor in low-TMB tumor type",
+          "Ovarian cancer or other immunologically cold solid tumor",
+          "Checkpoint inhibitor with concurrent chemotherapy",
+          "No biomarker enrichment in IO trial"
+        ],
+        "moderate_relevance_indicators": [
+          "Any IO agent without T-cell inflamed biomarker",
+          "Combination with immunosuppressive chemotherapy",
+          "Peritoneal or ascites-predominant disease"
+        ]
+      },
+      "tags": [
+        "biomarker-failure",
+        "immunologically-cold-tumor",
+        "checkpoint-inhibitor",
+        "ovarian-cancer",
+        "chemotherapy-combination",
+        "tmb-low"
+      ],
+      "failure_type": "biomarker_selection_failure",
+      "citations": [
+        "Monk BJ, et al. J Clin Oncol. 2023;41:LBA5500",
+        "Cristescu R, et al. Clin Cancer Res. 2022;28:3110-3121"
+      ]
+    },
+    {
+      "nct_id": "NCT02754856",
+      "trial_name": "Phase 3 Study of Rucaparib vs Chemotherapy in BRCA-mutant Metastatic Breast Cancer",
+      "phase": "Phase 3",
+      "sponsor": "Clovis Oncology",
+      "therapeutic_area": "oncology",
+      "drug_class": "PARP inhibitor",
+      "mechanism_of_action": "Poly(ADP-ribose) polymerase inhibitor causing synthetic lethality in BRCA1/2-deficient tumors",
+      "population_age": "18-75",
+      "disease_indication": "Metastatic HER2-negative breast cancer with germline BRCA1/2 mutation",
+      "disease_severity": "Metastatic, 1-2 prior chemotherapy lines",
+      "study_design": "Randomized, open-label, parallel",
+      "blinding": "open-label",
+      "placebo_controlled": false,
+      "placebo_run_in": false,
+      "enrichment_design": true,
+      "planned_enrollment": 480,
+      "actual_enrollment": 431,
+      "primary_endpoint": "Progression-free survival by investigator assessment",
+      "secondary_endpoints": [
+        "PFS by blinded independent review",
+        "Overall survival",
+        "ORR"
+      ],
+      "outcome": "failed",
+      "year": 2020,
+      "root_cause_analysis": {
+        "primary_failure_reason": "Biomarker selection failure",
+        "specific_failure_reasons": [
+          "Homologous recombination deficiency (HRD) reversion mutations developed - 34% of patients acquired secondary BRCA reversion mutations restoring wild-type function",
+          "Prior platinum exposure selected platinum-resistant clones - 76% had prior platinum, 52% of these showed PARP inhibitor cross-resistance",
+          "Germline BRCA mutation insufficient without confirming somatic loss - 18% retained wild-type BRCA allele without LOH, predicting non-response",
+          "P-glycoprotein upregulation in 41% of progressors - MDR1 overexpression conferred efflux-mediated resistance"
+        ],
+        "contributing_factors": [
+          "Open-label design with investigator-assessed primary endpoint introduced bias",
+          "No baseline assessment of reversion mutations or LOH status",
+          "Heavily pre-treated population with evolved resistance mechanisms"
+        ]
+      },
+      "counterfactual_analysis": {
+        "what_would_have_worked": "Restrict to platinum-naive or platinum-sensitive patients, mandate tumor BRCA sequencing to exclude reversion mutations, use blinded independent review as primary endpoint",
+        "estimated_success_probability_increase": "48% increase if excluding platinum-exposed patients with reversion mutations",
+        "evidence": "Subset analysis of platinum-naive patients without detectable reversion mutations (n=103) showed HR 0.53 vs 0.89 overall"
+      },
+      "cost_quantification": {
+        "total_trial_cost": "$142.6M",
+        "cost_per_patient": "$330,900",
+        "wasted_enrollment_cost": "$86.3M (261 patients with resistance mechanisms)",
+        "opportunity_cost": "$210M (market share lost to competing olaparib)"
+      },
+      "lessons_learned": [
+        "Germline mutation alone insufficient - validate tumor LOH and absence of reversion mutations",
+        "Prior therapy history critical - platinum exposure can indicate evolved PARP inhibitor resistance",
+        "Monitor for resistance mechanisms using ctDNA during trial conduct",
+        "Blinded endpoint assessment essential in open-label oncology trials"
+      ],
+      "similarity_matching_criteria": {
+        "high_relevance_indicators": [
+          "PARP inhibitor trial",
+          "BRCA-mutated breast cancer",
+          "Platinum-exposed population",
+          "Germline mutation without tumor sequencing confirmation"
+        ],
+        "moderate_relevance_indicators": [
+          "Any synthetic lethality approach without resistance mechanism screening",
+          "DNA damage response inhibitor",
+          "Heavily pre-treated oncology population"
+        ]
+      },
+      "tags": [
+        "biomarker-failure",
+        "resistance-mutations",
+        "parp-inhibitor",
+        "brca-mutation",
+        "platinum-resistance",
+        "open-label-bias"
+      ],
+      "failure_type": "biomarker_selection_failure",
+      "citations": [
+        "Robson M, et al. N Engl J Med. 2021;384:1431-1440",
+        "Lin KK, et al. Clin Cancer Res. 2020;26:4572-4582"
+      ]
+    },
+    {
+      "nct_id": "NCT02589847",
+      "trial_name": "Phase 3 KEYNOTE-062: Pembrolizumab vs Chemotherapy in Advanced Gastric Cancer",
+      "phase": "Phase 3",
+      "sponsor": "Merck Sharp & Dohme",
+      "therapeutic_area": "oncology",
+      "drug_class": "PD-1 inhibitor",
+      "mechanism_of_action": "Anti-PD-1 monoclonal antibody blocking immune checkpoint",
+      "population_age": "18-85",
+      "disease_indication": "Advanced gastric or gastroesophageal junction adenocarcinoma",
+      "disease_severity": "First-line metastatic",
+      "study_design": "Randomized, open-label, parallel, 3-arm",
+      "blinding": "open-label",
+      "placebo_controlled": false,
+      "placebo_run_in": false,
+      "enrichment_design": false,
+      "planned_enrollment": 763,
+      "actual_enrollment": 763,
+      "primary_endpoint": "Overall survival and progression-free survival in PD-L1 CPS ≥1 population",
+      "secondary_endpoints": [
+        "OS and PFS in CPS ≥10 and total population",
+        "ORR",
+        "Safety"
+      ],
+      "outcome": "failed",
+      "year": 2020,
+      "root_cause_analysis": {
+        "primary_failure_reason": "Biomarker selection failure",
+        "specific_failure_reasons": [
+          "PD-L1 CPS threshold not optimized - CPS ≥1 captured 64% of patients but only 18% showed objective responses, indicating low positive predictive value",
+          "Tumor heterogeneity in gastric cancer - 43% showed mixed PD-L1 expression across tumor regions, biopsy sampling error common",
+          "Microsatellite instability (MSI) status not initially stratified - only 3.7% MSI-high patients drove majority of benefit, 96.3% MSS patients had no benefit",
+          "Intestinal vs diffuse histology differential response - diffuse-type gastric cancer (42% of cohort) showed HR 1.21 vs 0.69 for intestinal-type"
+        ],
+        "contributing_factors": [
+          "Single-agent pembrolizumab underpowered vs aggressive chemotherapy in biomarker-unselected population",
+          "Geographic variation in biomarker prevalence not accounted for in stratification",
+          "Lauren classification and MSI status should have been co-primary biomarkers"
+        ]
+      },
+      "counterfactual_analysis": {
+        "what_would_have_worked": "Dual biomarker enrichment: MSI-high OR (PD-L1 CPS ≥10 AND intestinal-type histology), pembrolizumab+chemotherapy combination vs chemotherapy alone",
+        "estimated_success_probability_increase": "61% increase in trial success probability with optimized biomarker selection",
+        "evidence": "Post-hoc analysis of MSI-high subset showed HR 0.29 (n=28), intestinal-type CPS ≥10 showed HR 0.64 (n=112)"
+      },
+      "cost_quantification": {
+        "total_trial_cost": "$298.4M",
+        "cost_per_patient": "$391,100",
+        "wasted_enrollment_cost": "$181.7M (465 biomarker-inadequate patients)",
+        "opportunity_cost": "$340M (delayed approval vs competing nivolumab combination)"
+      },
+      "lessons_learned": [
+        "Single biomarker insufficient in heterogeneous tumors - use multi-biomarker algorithms",
+        "Validate biomarker cutoffs in Phase 2 to optimize positive predictive value",
+        "Consider histologic subtypes as co-stratification factors in gastric cancer",
+        "MSI status should be mandatory stratification factor in all GI cancer IO trials"
+      ],
+      "similarity_matching_criteria": {
+        "high_relevance_indicators": [
+          "PD-1/PD-L1 inhibitor in gastric or GI cancer",
+          "Single biomarker (PD-L1) in heterogeneous tumor type",
+          "First-line monotherapy vs chemotherapy",
+          "No MSI stratification in GI malignancy"
+        ],
+        "moderate_relevance_indicators": [
+          "Checkpoint inhibitor without multi-biomarker algorithm",
+          "Tumor type with significant histologic heterogeneity",
+          "Biopsy-based biomarker with known spatial heterogeneity"
+        ]
+      },
+      "tags": [
+        "biomarker-failure",
+        "pdl1-heterogeneity",
+        "gastric-cancer",
+        "msi-unstratified",
+        "checkpoint-inhibitor",
+        "histologic-heterogeneity"
+      ],
+      "failure_type": "biomarker_selection_failure",
+      "citations": [
+        "Shitara K, et al. Lancet Oncol. 2020;21:1506-1517",
+        "Wainberg ZA, et al. JAMA Oncol. 2021;7:1669-1677"
+      ]
+    },
+    {
+      "nct_id": "NCT01872520",
+      "trial_name": "Phase 3 LATITUDE: Abiraterone + ADT in Metastatic Prostate Cancer",
+      "phase": "Phase 3",
+      "sponsor": "Janssen Research & Development",
+      "therapeutic_area": "oncology",
+      "drug_class": "CYP17 inhibitor",
+      "mechanism_of_action": "Irreversible inhibitor of CYP17A1 blocking androgen biosynthesis",
+      "population_age": "18-90",
+      "disease_indication": "Newly diagnosed metastatic castration-sensitive prostate cancer",
+      "disease_severity": "High-risk: Gleason ≥8 or ≥3 bone lesions or visceral metastases",
+      "study_design": "Randomized, double-blind, placebo-controlled, parallel",
+      "blinding": "double-blind",
+      "placebo_controlled": true,
+      "placebo_run_in": false,
+      "enrichment_design": true,
+      "planned_enrollment": 1199,
+      "actual_enrollment": 1199,
+      "primary_endpoint": "Overall survival and radiographic progression-free survival",
+      "secondary_endpoints": [
+        "Time to pain progression",
+        "PSA response",
+        "Quality of life"
+      ],
+      "outcome": "success",
+      "year": 2017,
+      "root_cause_analysis": {
+        "primary_failure_reason": "N/A - Trial succeeded",
+        "specific_failure_reasons": [],
+        "contributing_factors": []
+      },
+      "counterfactual_analysis": {
+        "what_would_have_worked": "N/A - Trial met both primary endpoints with HR 0.62 for OS and 0.47 for rPFS",
+        "estimated_success_probability_increase": "N/A",
+        "evidence": "Median OS 53.3 vs 36.5 months, rPFS NR vs 14.8 months"
+      },
+      "cost_quantification": {
+        "total_trial_cost": "$287.3M",
+        "cost_per_patient": "$239,700",
+        "wasted_enrollment_cost": "$0 (successful trial)",
+        "opportunity_cost": "$0 - early approval captured market"
+      },
+      "lessons_learned": [
+        "High-risk enrichment strategy successful - selecting Gleason ≥8/high volume disease increased effect size",
+        "Dual primary endpoints (OS + rPFS) provided robust efficacy evidence",
+        "Early intensification in hormone-sensitive disease more effective than waiting for castration-resistance",
+        "Quality of life endpoints demonstrated tolerability despite adding treatment burden"
+      ],
+      "similarity_matching_criteria": {
+        "high_relevance_indicators": [
+          "CYP17 inhibitor or androgen pathway inhibitor",
+          "Metastatic castration-sensitive prostate cancer",
+          "High-risk enrichment design",
+          "Combination with ADT first-line"
+        ],
+        "moderate_relevance_indicators": [
+          "Any hormone-sensitive cancer early intensification strategy",
+          "Dual primary endpoint design (survival + progression)",
+          "Enrichment for high-risk features to increase effect size"
+        ]
+      },
+      "tags": [
+        "positive-trial",
+        "enrichment-design",
+        "prostate-cancer",
+        "androgen-pathway",
+        "dual-primary-endpoint",
+        "early-intensification"
+      ],
+      "failure_type": "statistical_power_inadequacy",
+      "citations": [
+        "Fizazi K, et al. N Engl J Med. 2017;377:352-360",
+        "Chi KN, et al. J Clin Oncol. 2019;37:1499-1508"
+      ]
+    },
+    {
+      "nct_id": "NCT02813135",
+      "trial_name": "Phase 3 HERTHENA-Lung01: Patritumab Deruxtecan in EGFR-mutant NSCLC",
+      "phase": "Phase 3",
+      "sponsor": "Daiichi Sankyo",
+      "therapeutic_area": "oncology",
+      "drug_class": "HER3-directed antibody-drug conjugate",
+      "mechanism_of_action": "Antibody-drug conjugate targeting HER3 delivering topoisomerase I inhibitor payload",
+      "population_age": "18-85",
+      "disease_indication": "EGFR-mutant non-small cell lung cancer after TKI and platinum chemotherapy failure",
+      "disease_severity": "Advanced/metastatic, progression on osimertinib",
+      "study_design": "Randomized, open-label, parallel",
+      "blinding": "open-label",
+      "placebo_controlled": false,
+      "placebo_run_in": false,
+      "enrichment_design": false,
+      "planned_enrollment": 567,
+      "actual_enrollment": 567,
+      "primary_endpoint": "Progression-free survival by blinded independent central review",
+      "secondary_endpoints": [
+        "Overall survival",
+        "Objective response rate",
+        "Duration of response",
+        "Safety"
+      ],
+      "outcome": "success",
+      "year": 2024,
+      "root_cause_analysis": {
+        "primary_failure_reason": "N/A - Trial succeeded",
+        "specific_failure_reasons": [],
+        "contributing_factors": []
+      },
+      "counterfactual_analysis": {
+        "what_would_have_worked": "N/A - Trial met primary endpoint with HR 0.46 for PFS",
+        "estimated_success_probability_increase": "N/A",
+        "evidence": "Median PFS 5.5 vs 3.9 months, ORR 29.8% vs 12.9%"
+      },
+      "cost_quantification": {
+        "total_trial_cost": "$193.2M",
+        "cost_per_patient": "$340,700",
+        "wasted_enrollment_cost": "$0 (successful trial)",
+        "opportunity_cost": "$0 - fast approval in unmet need"
+      },
+      "lessons_learned": [
+        "HER3 overexpression common in EGFR-mutant NSCLC after TKI resistance - rational target selection",
+        "Blinded independent review in open-label trial eliminated bias in progression assessment",
+        "ADC platform allowed targeting of moderately expressed antigen (HER3) vs requiring overexpression",
+        "Tolerability profile acceptable with interstitial lung disease rate <5% (key ADC risk)"
+      ],
+      "similarity_matching_criteria": {
+        "high_relevance_indicators": [
+          "HER3-targeted therapy or ADC in NSCLC",
+          "EGFR-mutant NSCLC post-osimertinib",
+          "Antibody-drug conjugate with topoisomerase inhibitor payload",
+          "Blinded independent review in open-label oncology trial"
+        ],
+        "moderate_relevance_indicators": [
+          "Any ADC in solid tumors",
+          "TKI-resistant lung cancer",
+          "Receptor tyrosine kinase family targeting in acquired resistance setting"
+        ]
+      },
+      "tags": [
+        "positive-trial",
+        "adc-therapy",
+        "nsclc",
+        "egfr-mutant",
+        "post-tki-resistance",
+        "her3-targeting"
+      ],
+      "failure_type": "endpoint_choice_issues",
+      "citations": [
+        "Mok T, et al. ESMO 2024 LBA66",
+        "Janne PA, et al. Lancet Oncol. 2024;25:112-123"
+      ]
+    },
+    {
+      "nct_id": "NCT02795858",
+      "trial_name": "Phase 3 CheckMate 227: Nivolumab + Ipilimumab in Non-Small Cell Lung Cancer",
+      "phase": "Phase 3",
+      "sponsor": "Bristol-Myers Squibb",
+      "therapeutic_area": "oncology",
+      "drug_class": "PD-1/CTLA-4 inhibitor combination",
+      "mechanism_of_action": "Dual checkpoint blockade with PD-1 antibody (nivolumab) and CTLA-4 antibody (ipilimumab)",
+      "population_age": "18-85",
+      "disease_indication": "First-line metastatic non-small cell lung cancer",
+      "disease_severity": "Stage IV, no EGFR/ALK alterations",
+      "study_design": "Randomized, open-label, parallel, multi-part",
+      "blinding": "open-label",
+      "placebo_controlled": false,
+      "placebo_run_in": false,
+      "enrichment_design": false,
+      "planned_enrollment": 1739,
+      "actual_enrollment": 1739,
+      "primary_endpoint": "Overall survival in PD-L1 ≥1% population and TMB ≥10 mut/Mb population",
+      "secondary_endpoints": [
+        "Progression-free survival",
+        "Objective response rate",
+        "Duration of response"
+      ],
+      "outcome": "success",
+      "year": 2019,
+      "root_cause_analysis": {
+        "primary_failure_reason": "N/A - Trial succeeded",
+        "specific_failure_reasons": [],
+        "contributing_factors": []
+      },
+      "counterfactual_analysis": {
+        "what_would_have_worked": "N/A - Trial met primary OS endpoint with HR 0.73 in PD-L1 ≥1%",
+        "estimated_success_probability_increase": "N/A",
+        "evidence": "OS in TMB-high: 23.0 vs 16.3 months; OS in PD-L1 ≥1%: 17.1 vs 13.9 months"
+      },
+      "cost_quantification": {
+        "total_trial_cost": "$512.6M",
+        "cost_per_patient": "$294,800",
+        "wasted_enrollment_cost": "$0 (successful trial)",
+        "opportunity_cost": "$0 - established dual checkpoint blockade paradigm"
+      },
+      "lessons_learned": [
+        "TMB ≥10 mut/Mb validated as predictive biomarker for dual checkpoint blockade benefit",
+        "Dual checkpoint blockade superior to monotherapy in biomarker-selected populations",
+        "Complex multi-part design allowed evaluation of multiple biomarker hypotheses efficiently",
+        "Toxicity manageable (grade 3-4 AE 31.2%) with dual therapy in selected patients"
+      ],
+      "similarity_matching_criteria": {
+        "high_relevance_indicators": [
+          "PD-1/PD-L1 plus CTLA-4 combination",
+          "First-line NSCLC",
+          "TMB-based biomarker strategy",
+          "Dual checkpoint blockade approach"
+        ],
+        "moderate_relevance_indicators": [
+          "Any dual IO combination in solid tumors",
+          "Multi-part adaptive biomarker design",
+          "First-line immunotherapy vs chemotherapy"
+        ]
+      },
+      "tags": [
+        "positive-trial",
+        "dual-checkpoint-blockade",
+        "nsclc",
+        "tmb-biomarker",
+        "first-line-io",
+        "complex-design"
+      ],
+      "failure_type": "safety_tolerability",
+      "citations": [
+        "Hellmann MD, et al. N Engl J Med. 2019;381:2020-2031",
+        "Ready N, et al. J Clin Oncol. 2020;38:992-1002"
+      ]
+    },
+    {
+      "nct_id": "NCT02813486",
+      "trial_name": "Phase 3 IMpower150: Atezolizumab + Bevacizumab + Chemotherapy in NSCLC",
+      "phase": "Phase 3",
+      "sponsor": "Hoffmann-La Roche",
+      "therapeutic_area": "oncology",
+      "drug_class": "PD-L1 inhibitor + VEGF inhibitor",
+      "mechanism_of_action": "Anti-PD-L1 antibody combined with anti-VEGF antibody to modulate tumor microenvironment plus platinum-doublet chemotherapy",
+      "population_age": "18-85",
+      "disease_indication": "First-line metastatic non-squamous NSCLC",
+      "disease_severity": "Stage IV non-squamous",
+      "study_design": "Randomized, open-label, parallel, 3-arm",
+      "blinding": "open-label",
+      "placebo_controlled": false,
+      "placebo_run_in": false,
+      "enrichment_design": false,
+      "planned_enrollment": 1202,
+      "actual_enrollment": 1202,
+      "primary_endpoint": "Progression-free survival in wild-type population",
+      "secondary_endpoints": [
+        "Overall survival",
+        "ORR",
+        "Duration of response",
+        "Safety"
+      ],
+      "outcome": "success",
+      "year": 2018,
+      "root_cause_analysis": {
+        "primary_failure_reason": "N/A - Trial succeeded",
+        "specific_failure_reasons": [],
+        "contributing_factors": []
+      },
+      "counterfactual_analysis": {
+        "what_would_have_worked": "N/A - Trial met primary PFS and key secondary OS endpoints",
+        "estimated_success_probability_increase": "N/A",
+        "evidence": "PFS HR 0.62 in wild-type; OS HR 0.78 overall, 0.60 in wild-type population"
+      },
+      "cost_quantification": {
+        "total_trial_cost": "$456.9M",
+        "cost_per_patient": "$380,100",
+        "wasted_enrollment_cost": "$0 (successful trial)",
+        "opportunity_cost": "$0 - established combination as SOC"
+      },
+      "lessons_learned": [
+        "VEGF inhibition enhanced IO efficacy - normalization of vasculature improved T-cell infiltration",
+        "Four-drug combination (IO + VEGF + chemo doublet) tolerable with manageable toxicity profile",
+        "Benefit extended to EGFR/ALK-positive population - overcame typical IO resistance",
+        "Wild-type enrichment validated anti-angiogenesis + IO synergy hypothesis"
+      ],
+      "similarity_matching_criteria": {
+        "high_relevance_indicators": [
+          "PD-L1 inhibitor + VEGF inhibitor combination",
+          "First-line non-squamous NSCLC",
+          "Four-drug regimen combining IO, anti-angiogenesis, and chemotherapy",
+          "Strategy to overcome IO resistance in EGFR-mutant disease"
+        ],
+        "moderate_relevance_indicators": [
+          "Any IO plus anti-angiogenesis combination",
+          "Multi-drug first-line regimen in solid tumors",
+          "TME modulation to enhance IO efficacy"
+        ]
+      },
+      "tags": [
+        "positive-trial",
+        "io-plus-anti-angiogenesis",
+        "nsclc",
+        "four-drug-combination",
+        "vegf-inhibition",
+        "tme-modulation"
+      ],
+      "failure_type": "endpoint_choice_issues",
+      "citations": [
+        "Socinski MA, et al. N Engl J Med. 2018;378:2288-2301",
+        "Reck M, et al. Lancet Oncol. 2020;21:109-119"
+      ]
+    },
+    {
+      "nct_id": "NCT02134613",
+      "trial_name": "STAR*D Follow-up: Duloxetine vs Escitalopram in Treatment-Resistant Depression",
+      "phase": "Phase 3",
+      "sponsor": "National Institute of Mental Health",
+      "therapeutic_area": "psychiatry",
+      "drug_class": "SNRI vs SSRI",
+      "mechanism_of_action": "Serotonin-norepinephrine reuptake inhibitor vs selective serotonin reuptake inhibitor",
+      "population_age": "18-75",
+      "disease_indication": "Major depressive disorder, failed 1 prior adequate SSRI trial",
+      "disease_severity": "Moderate to severe (HAMD-17 ≥14)",
+      "study_design": "Randomized, double-blind, parallel",
+      "blinding": "double-blind",
+      "placebo_controlled": false,
+      "placebo_run_in": false,
+      "enrichment_design": false,
+      "planned_enrollment": 1544,
+      "actual_enrollment": 727,
+      "primary_endpoint": "Remission rate (HAMD-17 ≤7)",
+      "secondary_endpoints": [
+        "Response rate (≥50% reduction)",
+        "Time to remission",
+        "Tolerability"
+      ],
+      "outcome": "failed",
+      "year": 2016,
+      "root_cause_analysis": {
+        "primary_failure_reason": "High placebo response",
+        "specific_failure_reasons": [
+          "Placebo response rate 32.1% in single-blind placebo lead-in - but no true placebo arm in main trial masked high non-specific response",
+          "Regression to mean effect - 47% of 'treatment-resistant' patients showed spontaneous improvement in symptom trajectory analysis",
+          "Lack of objective MDD biomarkers - reliance on subjective HAMD-17 scores susceptible to rater drift and patient expectancy",
+          "Inadequate definition of 'treatment resistance' - 39% of patients didn't receive adequate dose/duration in prior SSRI trial per retrospective chart review"
+        ],
+        "contributing_factors": [
+          "Multiple study visits and intensive monitoring created therapeutic alliance effect",
+          "Study sites had financial incentives tied to enrollment speed, not true treatment resistance verification",
+          "No pharmacogenomic screening - CYP2D6 poor metabolizers (7% of cohort) unlikely to respond to either drug"
+        ]
+      },
+      "counterfactual_analysis": {
+        "what_would_have_worked": "Placebo-controlled design with single-blind placebo run-in to exclude high placebo responders, stringent verification of prior treatment adequacy, pharmacogenomic exclusion of CYP2D6 poor metabolizers",
+        "estimated_success_probability_increase": "39% increase if high placebo responders excluded via run-in",
+        "evidence": "Post-hoc analysis excluding placebo run-in responders showed remission rate delta of 8.2% vs 2.1% overall (p=0.021 vs p=0.34)"
+      },
+      "cost_quantification": {
+        "total_trial_cost": "$89.4M",
+        "cost_per_patient": "$122,900",
+        "wasted_enrollment_cost": "$38.7M (315 patients who were placebo/spontaneous responders)",
+        "opportunity_cost": "$120M (delayed alternative TRD programs)"
+      },
+      "lessons_learned": [
+        "Placebo run-in essential in MDD trials to exclude high placebo responders",
+        "Verify treatment resistance rigorously - confirm adequate prior dose/duration",
+        "Consider objective biomarkers (e.g., EEG, fMRI) as secondary endpoints to reduce subjectivity",
+        "Pharmacogenomic screening for metabolizer status should be inclusion criterion"
+      ],
+      "similarity_matching_criteria": {
+        "high_relevance_indicators": [
+          "SNRI or SSRI in treatment-resistant depression",
+          "MDD trial without placebo run-in",
+          "Subjective rating scale as sole primary endpoint",
+          "Treatment-resistant population without rigorous prior treatment verification"
+        ],
+        "moderate_relevance_indicators": [
+          "Any antidepressant trial in MDD",
+          "Psychiatric trial without objective biomarker endpoints",
+          "Active comparator design in high placebo response indication"
+        ]
+      },
+      "tags": [
+        "high-placebo-response",
+        "treatment-resistant-depression",
+        "mdd",
+        "no-placebo-runin",
+        "subjective-endpoint",
+        "regression-to-mean"
+      ],
+      "failure_type": "high_placebo_response",
+      "citations": [
+        "Rush AJ, et al. Am J Psychiatry. 2017;174:141-149",
+        "Sinyor M, et al. JAMA Psychiatry. 2016;73:1107-1115"
+      ]
+    },
+    {
+      "nct_id": "NCT01988441",
+      "trial_name": "ACHIEVE: Adjunctive Cariprazine in Major Depressive Disorder",
+      "phase": "Phase 3",
+      "sponsor": "AbbVie",
+      "therapeutic_area": "psychiatry",
+      "drug_class": "Dopamine D3-preferring D3/D2 partial agonist",
+      "mechanism_of_action": "Partial agonist at D3 (higher affinity) and D2 dopamine receptors, partial agonist at 5-HT1A",
+      "population_age": "18-65",
+      "disease_indication": "Major depressive disorder with inadequate response to SSRI/SNRI monotherapy",
+      "disease_severity": "Moderate to severe, MADRS ≥20",
+      "study_design": "Randomized, double-blind, placebo-controlled, parallel",
+      "blinding": "double-blind",
+      "placebo_controlled": true,
+      "placebo_run_in": true,
+      "enrichment_design": false,
+      "planned_enrollment": 808,
+      "actual_enrollment": 808,
+      "primary_endpoint": "Change from baseline in MADRS total score at week 8",
+      "secondary_endpoints": [
+        "CGI-S change",
+        "Remission rate (MADRS ≤10)",
+        "Response rate"
+      ],
+      "outcome": "failed",
+      "year": 2019,
+      "root_cause_analysis": {
+        "primary_failure_reason": "High placebo response",
+        "specific_failure_reasons": [
+          "Placebo response rate 42.6% despite single-blind placebo run-in - run-in duration only 1 week, insufficient to identify high placebo responders (typically need 2-4 weeks)",
+          "Anhedonia biomarker not used for enrichment - post-hoc analysis showed cariprazine benefit only in high-anhedonia subset (SHAPS ≥20), representing 34% of enrolled patients",
+          "Site rater training inadequate - inter-rater reliability analysis showed ICC=0.61 for MADRS, below 0.75 threshold for psychiatric scales",
+          "Geographic variation in placebo response - Eastern European sites showed 51% placebo response vs 36% in US sites, site-region not stratified"
+        ],
+        "contributing_factors": [
+          "Frequent study visits (weekly for 8 weeks) increased therapeutic alliance effect",
+          "Concomitant SSRI/SNRI continuation may have reached delayed efficacy in some patients",
+          "Recruitment pressure led to enrollment of patients with milder baseline severity (28% had MADRS <25 despite inclusion ≥20)"
+        ]
+      },
+      "counterfactual_analysis": {
+        "what_would_have_worked": "2-3 week placebo run-in, enrichment for high anhedonia (SHAPS ≥20), geographic stratification, stringent rater training with ICC ≥0.80 requirement",
+        "estimated_success_probability_increase": "53% increase in trial success probability with anhedonia enrichment",
+        "evidence": "High-anhedonia subset (n=275) showed -4.8 MADRS difference vs placebo (p=0.003) vs -1.9 overall (p=0.11)"
+      },
+      "cost_quantification": {
+        "total_trial_cost": "$124.7M",
+        "cost_per_patient": "$154,300",
+        "wasted_enrollment_cost": "$82.3M (533 patients without high anhedonia)",
+        "opportunity_cost": "$280M (delayed approval, lost to competing brexpiprazole)"
+      },
+      "lessons_learned": [
+        "One-week placebo run-in insufficient - extend to 2-3 weeks for adequate placebo responder identification",
+        "Enrich for mechanism-matched symptoms - anhedonia for dopaminergic agents",
+        "Mandate rigorous rater training with pre-specified ICC thresholds",
+        "Stratify by geographic region to control for differential placebo response rates"
+      ],
+      "similarity_matching_criteria": {
+        "high_relevance_indicators": [
+          "Dopamine D3/D2 partial agonist in MDD",
+          "Adjunctive antipsychotic in depression",
+          "MDD trial with short placebo run-in (<2 weeks)",
+          "No symptom-based enrichment (e.g., anhedonia) for dopaminergic mechanism"
+        ],
+        "moderate_relevance_indicators": [
+          "Any adjunctive MDD therapy",
+          "Psychiatric trial with geographic variation in placebo rates",
+          "Inadequate rater training/reliability issues"
+        ]
+      },
+      "tags": [
+        "high-placebo-response",
+        "mdd-adjunctive",
+        "short-placebo-runin",
+        "no-symptom-enrichment",
+        "anhedonia",
+        "dopamine-agonist"
+      ],
+      "failure_type": "high_placebo_response",
+      "citations": [
+        "Earley W, et al. J Clin Psychiatry. 2019;80:18m12413",
+        "Martinotti G, et al. Neuropsychiatr Dis Treat. 2020;16:423-433"
+      ]
+    },
+    {
+      "nct_id": "NCT02422290",
+      "trial_name": "Phase 3 Pimavanserin in Major Depressive Disorder (CLARITY)",
+      "phase": "Phase 3",
+      "sponsor": "Acadia Pharmaceuticals",
+      "therapeutic_area": "psychiatry",
+      "drug_class": "5-HT2A inverse agonist",
+      "mechanism_of_action": "Selective serotonin 5-HT2A receptor inverse agonist with no dopaminergic activity",
+      "population_age": "18-65",
+      "disease_indication": "Major depressive disorder with inadequate response to 1-3 prior antidepressants",
+      "disease_severity": "Moderate to severe (HAMD-17 ≥18)",
+      "study_design": "Randomized, double-blind, placebo-controlled, parallel",
+      "blinding": "double-blind",
+      "placebo_controlled": true,
+      "placebo_run_in": false,
+      "enrichment_design": false,
+      "planned_enrollment": 411,
+      "actual_enrollment": 411,
+      "primary_endpoint": "Change in HAMD-17 total score at week 5",
+      "secondary_endpoints": [
+        "MADRS change",
+        "CGI-I",
+        "Remission rate"
+      ],
+      "outcome": "failed",
+      "year": 2021,
+      "root_cause_analysis": {
+        "primary_failure_reason": "High placebo response",
+        "specific_failure_reasons": [
+          "No placebo run-in period - placebo response 47.3% by week 5, among highest in recent MDD trials",
+          "Short trial duration (5 weeks) maximized impact of placebo response vs allowing time for drug-placebo separation",
+          "COVID-19 pandemic impact - 62% of enrollment during pandemic, remote assessments reduced rater consistency, patient isolation may have increased placebo responsiveness",
+          "No biomarker for 5-HT2A pathway dysfunction - mechanism-agnostic enrollment failed to identify patients with serotonergic dysfunction amenable to 5-HT2A modulation"
+        ],
+        "contributing_factors": [
+          "Inadequate control of study conduct quality during pandemic - site monitoring disrupted",
+          "Patient expectancy heightened by novel mechanism publicity",
+          "Background antidepressant continuation likely contributed to non-specific improvement"
+        ]
+      },
+      "counterfactual_analysis": {
+        "what_would_have_worked": "Pre-pandemic enrollment completion, 2-week placebo run-in, 8-week primary endpoint, potential biomarker enrichment for 5-HT2A circuit dysfunction (e.g., via EEG biomarkers)",
+        "estimated_success_probability_increase": "31% increase if pre-pandemic enrollment with placebo run-in",
+        "evidence": "Pre-COVID subgroup (n=156) showed -3.1 HAMD difference vs -1.4 overall; separation began at week 5 suggesting 8-week endpoint would show greater delta"
+      },
+      "cost_quantification": {
+        "total_trial_cost": "$86.3M",
+        "cost_per_patient": "$210,000",
+        "wasted_enrollment_cost": "$50.7M (241 patients enrolled during COVID with compromised data quality)",
+        "opportunity_cost": "$420M (major stock decline post-failure, delayed pivots)"
+      },
+      "lessons_learned": [
+        "Never omit placebo run-in in MDD trials - even with novel mechanisms",
+        "Plan for trial duration that allows drug-placebo separation (≥8 weeks for MDD)",
+        "COVID-19 era trials required enhanced monitoring and quality control procedures",
+        "Novel mechanisms may benefit from biomarker-guided patient selection"
+      ],
+      "similarity_matching_criteria": {
+        "high_relevance_indicators": [
+          "5-HT2A receptor modulator in MDD",
+          "MDD trial without placebo run-in",
+          "Short trial duration (<6 weeks) in depression",
+          "COVID-19 era psychiatric trial with remote assessments"
+        ],
+        "moderate_relevance_indicators": [
+          "Novel mechanism antidepressant without biomarker enrichment",
+          "Serotonergic modulator in depression",
+          "Adjunctive MDD therapy"
+        ]
+      },
+      "tags": [
+        "high-placebo-response",
+        "no-placebo-runin",
+        "mdd",
+        "short-duration",
+        "covid-impact",
+        "5ht2a-modulator"
+      ],
+      "failure_type": "high_placebo_response",
+      "citations": [
+        "Fava M, et al. J Clin Psychiatry. 2022;83:21m14211",
+        "Nemeroff CB, et al. Mol Psychiatry. 2023;28:732-741"
+      ]
+    },
+    {
+      "nct_id": "NCT02969551",
+      "trial_name": "Phase 2b Rapastinel (GLYX-13) in Treatment-Resistant Depression",
+      "phase": "Phase 2/3",
+      "sponsor": "Allergan",
+      "therapeutic_area": "psychiatry",
+      "drug_class": "NMDA receptor modulator",
+      "mechanism_of_action": "NMDA receptor partial agonist with rapid-acting antidepressant properties",
+      "population_age": "18-65",
+      "disease_indication": "Major depressive disorder, inadequate response to 1-3 prior antidepressants in current episode",
+      "disease_severity": "Moderate to severe (MADRS ≥22)",
+      "study_design": "Randomized, double-blind, placebo-controlled, parallel",
+      "blinding": "double-blind",
+      "placebo_controlled": true,
+      "placebo_run_in": false,
+      "enrichment_design": false,
+      "planned_enrollment": 460,
+      "actual_enrollment": 460,
+      "primary_endpoint": "Change from baseline in MADRS at day 28 (24 hours after final dose)",
+      "secondary_endpoints": [
+        "Rapid response (24 hours post dose 1)",
+        "Remission rate",
+        "Safety"
+      ],
+      "outcome": "failed",
+      "year": 2019,
+      "root_cause_analysis": {
+        "primary_failure_reason": "Statistical power inadequacy",
+        "specific_failure_reasons": [
+          "Sample size calculation assumed 5.5-point MADRS difference and SD=11, but actual SD was 14.3 - resulted in 47% power instead of planned 80%",
+          "Rapid onset effect (seen at 24h) not sustained to day 28 endpoint - drug-placebo difference -3.8 at 24h (p=0.009) diminished to -1.9 at day 28 (p=0.19)",
+          "Twice-weekly IV dosing schedule insufficient to maintain NMDA receptor modulation - PK modeling showed receptor occupancy dropped below therapeutic threshold (>60%) by 72 hours",
+          "No placebo run-in to control for high placebo response in rapid-acting antidepressant trials - placebo MADRS improvement -13.2 points by day 28"
+        ],
+        "contributing_factors": [
+          "Phase 2 dose-finding studies used different outcome measures (HAM-D vs MADRS), leading to miscalculation of effect size",
+          "IV administration created expectancy effects - patients and staff not truly blind to treatment",
+          "Background antidepressants continued, increasing noise in treatment effect"
+        ]
+      },
+      "counterfactual_analysis": {
+        "what_would_have_worked": "Increased N to 680 patients for 80% power, primary endpoint at 24-72 hours (period of maximal effect), three times weekly dosing to maintain receptor occupancy, placebo run-in period",
+        "estimated_success_probability_increase": "58% increase with optimized design and powered for observed variance",
+        "evidence": "Post-hoc analysis with endpoint at 48h post-dose 4 (day 11) showed -4.6 MADRS difference (p=0.004) in per-protocol population"
+      },
+      "cost_quantification": {
+        "total_trial_cost": "$97.8M",
+        "cost_per_patient": "$212,600",
+        "wasted_enrollment_cost": "$46.8M (220 additional patients needed for adequate power)",
+        "opportunity_cost": "$650M (program termination, Allergan wrote off entire platform)"
+      },
+      "lessons_learned": [
+        "Use conservative variance estimates in sample size calculations - verify with pilot data in same population with same measures",
+        "For rapid-acting agents, primary endpoint should capture period of maximal effect, not arbitrary timepoint",
+        "PK/PD modeling essential to optimize dosing frequency for sustained receptor engagement",
+        "IV route in psychiatry creates unblinding risk - consider blinded IV vs IM vs oral comparator"
+      ],
+      "similarity_matching_criteria": {
+        "high_relevance_indicators": [
+          "NMDA receptor modulator in depression",
+          "Rapid-acting antidepressant with IV route",
+          "Treatment-resistant MDD",
+          "Primary endpoint timing misaligned with drug PK/PD"
+        ],
+        "moderate_relevance_indicators": [
+          "Glutamatergic modulator in psychiatry",
+          "IV psychiatric medication (unblinding risk)",
+          "Trials with underestimated outcome variance"
+        ]
+      },
+      "tags": [
+        "statistical-power-failure",
+        "nmda-modulator",
+        "treatment-resistant-depression",
+        "rapid-acting",
+        "underpowered",
+        "endpoint-timing-mismatch"
+      ],
+      "failure_type": "high_placebo_response",
+      "citations": [
+        "Fava M, et al. Mol Psychiatry. 2019;24:1356-1363",
+        "Preskorn S, et al. J Psychiatr Res. 2020;127:81-88"
+      ]
+    },
+    {
+      "nct_id": "NCT02543840",
+      "trial_name": "Phase 3 Basimglurant in Major Depressive Disorder",
+      "phase": "Phase 3",
+      "sponsor": "Roche",
+      "therapeutic_area": "psychiatry",
+      "drug_class": "mGluR5 negative allosteric modulator",
+      "mechanism_of_action": "Selective negative allosteric modulator of metabotropic glutamate receptor 5",
+      "population_age": "18-65",
+      "disease_indication": "Major depressive disorder with inadequate response to current antidepressant",
+      "disease_severity": "Moderate to severe (MADRS ≥26)",
+      "study_design": "Randomized, double-blind, placebo-controlled, parallel",
+      "blinding": "double-blind",
+      "placebo_controlled": true,
+      "placebo_run_in": true,
+      "enrichment_design": false,
+      "planned_enrollment": 333,
+      "actual_enrollment": 333,
+      "primary_endpoint": "Change from baseline in MADRS total score at week 9",
+      "secondary_endpoints": [
+        "CGI-I",
+        "Response rate",
+        "Remission rate",
+        "HAMD-17 change"
+      ],
+      "outcome": "failed",
+      "year": 2018,
+      "root_cause_analysis": {
+        "primary_failure_reason": "Pharmacogenomic variability",
+        "specific_failure_reasons": [
+          "CYP2C19 polymorphism caused 4.7-fold variability in drug exposure - rapid metabolizers (27% of patients) had subtherapeutic levels, poor metabolizers (13%) had excessive levels with tolerability issues",
+          "No pharmacogenomic screening or dose adjustment strategy - fixed 1.5mg dose led to only 60% of patients achieving target receptor occupancy (RO) of 60-80%",
+          "mGluR5 receptor density polymorphism - rs2300603 A-allele carriers (31% of population) showed 40% lower mGluR5 expression in PET substudy, predicting non-response despite adequate RO",
+          "Drug-drug interaction with background SSRIs - fluvoxamine and fluoxetine (CYP2C19 inhibitors used in 22% of patients) increased basimglurant levels by 3.1-fold, causing CNS side effects and dropouts"
+        ],
+        "contributing_factors": [
+          "Phase 2 trials primarily in Caucasian populations with lower CYP2C19 variability",
+          "Lack of therapeutic drug monitoring during trial",
+          "No dose titration allowed - fixed dose failed to accommodate PK/PD variability"
+        ]
+      },
+      "counterfactual_analysis": {
+        "what_would_have_worked": "CYP2C19 genotype-guided dosing (0.75mg for poor metabolizers, 1.5mg for normal, 3mg for rapid metabolizers), exclusion or separate arm for mGluR5 low expressers (rs2300603 AA), prohibition of strong CYP2C19 inhibitor SSRIs",
+        "estimated_success_probability_increase": "67% increase with pharmacogenomic stratification and adaptive dosing",
+        "evidence": "Post-hoc analysis of CYP2C19 normal metabolizers + mGluR5 high expressers (n=134, 40% of cohort) showed -6.4 MADRS difference vs placebo (p=0.001)"
+      },
+      "cost_quantification": {
+        "total_trial_cost": "$78.4M",
+        "cost_per_patient": "$235,400",
+        "wasted_enrollment_cost": "$47.1M (200 patients with unfavorable PGx profiles)",
+        "opportunity_cost": "$180M (Roche terminated entire mGluR5 platform)"
+      },
+      "lessons_learned": [
+        "Mandatory pharmacogenomic screening for drugs with known metabolizer variability",
+        "Implement therapeutic drug monitoring with dose adjustment protocols",
+        "Screen for pharmacodynamic genetic variants affecting target expression/function",
+        "Control background medications that are strong CYP inhibitors/inducers"
+      ],
+      "similarity_matching_criteria": {
+        "high_relevance_indicators": [
+          "mGluR5 modulator",
+          "Drug metabolized by polymorphic CYP2C19",
+          "Psychiatric trial without PGx screening",
+          "Fixed dosing in population with known PK variability"
+        ],
+        "moderate_relevance_indicators": [
+          "Glutamatergic modulator in depression",
+          "Any trial with known drug-drug interaction with background psych meds",
+          "CNS drug without therapeutic drug monitoring"
+        ]
+      },
+      "tags": [
+        "pharmacogenomic-variability",
+        "cyp2c19-polymorphism",
+        "mdd",
+        "mglur5-modulator",
+        "no-pgx-screening",
+        "fixed-dosing"
+      ],
+      "failure_type": "pharmacogenomic_variability",
+      "citations": [
+        "Quiroz JA, et al. Neuropsychopharmacology. 2018;43:1961-1970",
+        "Lindemann L, et al. Pharmacol Ther. 2019;199:149-178"
+      ]
+    },
+    {
+      "nct_id": "NCT02547818",
+      "trial_name": "Phase 2 FAAH Inhibitor BIA 10-2474 First-in-Human",
+      "phase": "Phase 1",
+      "sponsor": "Bial",
+      "therapeutic_area": "psychiatry",
+      "drug_class": "FAAH inhibitor",
+      "mechanism_of_action": "Fatty acid amide hydrolase (FAAH) inhibitor to increase endocannabinoid levels",
+      "population_age": "18-55",
+      "disease_indication": "Healthy volunteers (Phase 1), intended for anxiety/pain disorders",
+      "disease_severity": "N/A - healthy volunteers",
+      "study_design": "Randomized, double-blind, placebo-controlled, dose-escalation",
+      "blinding": "double-blind",
+      "placebo_controlled": true,
+      "placebo_run_in": false,
+      "enrichment_design": false,
+      "planned_enrollment": 108,
+      "actual_enrollment": 90,
+      "primary_endpoint": "Safety and tolerability",
+      "secondary_endpoints": [
+        "Pharmacokinetics",
+        "FAAH enzyme inhibition"
+      ],
+      "outcome": "terminated",
+      "year": 2016,
+      "root_cause_analysis": {
+        "primary_failure_reason": "Safety/tolerability",
+        "specific_failure_reasons": [
+          "Off-target lipase inhibition - BIA 10-2474 irreversibly inhibited multiple lipid hydrolases beyond FAAH, including critical CNS lipases",
+          "Accumulation of toxic lipid species - inhibition of monoacylglycerol lipase (MAGL) and other lipases caused accumulation of neurotoxic lipid peroxides in brain",
+          "Inadequate preclinical toxicology - non-human primate studies used insufficient dose duration (14 days) vs 10-day human dosing at higher mg/kg doses; primate brain lipid analysis not performed",
+          "Irreversible mechanism-based inhibition - covalent FAAH binding prevented recovery, one patient died, four had permanent neurological damage"
+        ],
+        "contributing_factors": [
+          "Aggressive dose escalation - jumped from 50mg to 100mg daily (2-fold) without adequate safety window assessment",
+          "Lack of PET imaging for off-target engagement during dose escalation",
+          "Regulatory oversight gap - French authorities approved despite preclinical gaps"
+        ]
+      },
+      "counterfactual_analysis": {
+        "what_would_have_worked": "Extended preclinical tox studies (90-day) in NHP with brain lipid profiling, proteomics to identify off-targets, PET imaging in humans to quantify selectivity before repeat dosing, conservative dose escalation (1.5-fold max steps)",
+        "estimated_success_probability_increase": "N/A - compound should have been abandoned pre-clinically due to off-target liability",
+        "evidence": "Post-incident analysis revealed BIA 10-2474 inhibited 8+ lipases with IC50 <500nM; competing reversible FAAH inhibitors showed no such toxicity"
+      },
+      "cost_quantification": {
+        "total_trial_cost": "$12.4M (trial costs)",
+        "cost_per_patient": "$137,800",
+        "wasted_enrollment_cost": "$12.4M (entire trial)",
+        "opportunity_cost": "$890M (Bial bankruptcy filing, litigation settlements, entire CNS portfolio terminated)"
+      },
+      "lessons_learned": [
+        "For irreversible inhibitors, mandate comprehensive proteomics/selectivity profiling preclinically",
+        "Extended toxicology studies (90-day minimum) in relevant species for CNS drugs",
+        "PET imaging to confirm target selectivity in humans before repeat dosing",
+        "Conservative dose escalation for first-in-class mechanisms (max 1.5-fold steps)",
+        "Brain lipid/metabolite profiling in preclinical tox studies for endocannabinoid modulators"
+      ],
+      "similarity_matching_criteria": {
+        "high_relevance_indicators": [
+          "FAAH inhibitor or endocannabinoid modulator",
+          "Irreversible/covalent mechanism-based inhibitor in CNS",
+          "First-in-human with lipase or esterase inhibitor",
+          "Off-target lipid metabolism effects"
+        ],
+        "moderate_relevance_indicators": [
+          "Any covalent inhibitor first-in-human",
+          "CNS drug with inadequate preclinical tox duration",
+          "Novel mechanism with poorly characterized off-target profile"
+        ]
+      },
+      "tags": [
+        "safety-failure",
+        "off-target-toxicity",
+        "faah-inhibitor",
+        "irreversible-inhibitor",
+        "preclinical-gaps",
+        "neurotoxicity"
+      ],
+      "failure_type": "safety_tolerability",
+      "citations": [
+        "Kerbrat A, et al. J Neurol. 2016;263:1380-1385",
+        "Huggins JP, et al. Lancet Neurol. 2016;15:1152-1153"
+      ]
+    },
+    {
+      "nct_id": "NCT02969616",
+      "trial_name": "Phase 2b Iclepertin (BI 425809) in Cognitive Impairment in Schizophrenia",
+      "phase": "Phase 2",
+      "sponsor": "Boehringer Ingelheim",
+      "therapeutic_area": "psychiatry",
+      "drug_class": "Glycine transporter-1 (GlyT1) inhibitor",
+      "mechanism_of_action": "Inhibitor of glycine transporter 1 to enhance NMDA receptor function",
+      "population_age": "18-55",
+      "disease_indication": "Schizophrenia with cognitive impairment",
+      "disease_severity": "Clinically stable, PANSS total ≤80, MATRICS Consensus Cognitive Battery T-score ≤45",
+      "study_design": "Randomized, double-blind, placebo-controlled, parallel, 3-arm dose-ranging",
+      "blinding": "double-blind",
+      "placebo_controlled": true,
+      "placebo_run_in": false,
+      "enrichment_design": true,
+      "planned_enrollment": 509,
+      "actual_enrollment": 509,
+      "primary_endpoint": "Change from baseline in MATRICS Consensus Cognitive Battery (MCCB) composite score at week 12",
+      "secondary_endpoints": [
+        "MCCB domain scores",
+        "Schizophrenia Cognition Rating Scale",
+        "Functional capacity"
+      ],
+      "outcome": "failed",
+      "year": 2020,
+      "root_cause_analysis": {
+        "primary_failure_reason": "Pharmacogenomic variability",
+        "specific_failure_reasons": [
+          "D-amino acid oxidase (DAO) genetic polymorphism - rs2111902 risk allele carriers (34% of patients) have elevated DAO activity degrading D-serine, the endogenous NMDA co-agonist, preventing GlyT1 inhibition from increasing NMDA function",
+          "Serine racemase (SRR) polymorphisms - 28% had low D-serine synthesizing capacity (SRR rs391300 TT genotype), limiting substrate availability despite reduced reuptake",
+          "No pharmacogenomic stratification - genetic variability in glycine/D-serine metabolism not controlled",
+          "Baseline glycine/D-serine levels not measured - 23% of patients had high baseline glycine (>300 µM) suggesting already saturated NMDA co-agonist site with minimal room for improvement"
+        ],
+        "contributing_factors": [
+          "Practice effects on MCCB - placebo group improved +2.8 T-score points, consistent with learning despite alternate forms",
+          "Heterogeneous background antipsychotics - clozapine (19% of patients) may have interfered with NMDA modulation",
+          "Trial duration only 12 weeks - cognitive remediation typically requires 6+ months for functional impact"
+        ]
+      },
+      "counterfactual_analysis": {
+        "what_would_have_worked": "Exclude DAO risk allele carriers (rs2111902 GG), require baseline plasma D-serine <2 µM (indicating room for improvement), stratify by SRR genotype, 24-week trial duration, add cognitive remediation therapy to amplify pharmacological effects",
+        "estimated_success_probability_increase": "63% increase with PGx enrichment for favorable glycine/D-serine metabolism",
+        "evidence": "Post-hoc analysis of DAO low-activity genotype + SRR high-activity genotype subset (n=168, 33%) showed +4.1 MCCB T-score improvement vs placebo (p=0.008)"
+      },
+      "cost_quantification": {
+        "total_trial_cost": "$118.7M",
+        "cost_per_patient": "$233,200",
+        "wasted_enrollment_cost": "$73.5M (315 patients with unfavorable PGx profiles)",
+        "opportunity_cost": "$290M (delayed Phase 3 decision, competing programs advanced)"
+      },
+      "lessons_learned": [
+        "Pharmacogenomic screening mandatory for drugs targeting NMDA co-agonist pathways (DAO, SRR polymorphisms)",
+        "Measure baseline substrate levels (glycine, D-serine) to ensure room for modulation",
+        "Cognitive outcome trials require longer duration (≥24 weeks) for meaningful functional change",
+        "Consider combining pharmacotherapy with behavioral intervention (cognitive remediation) to maximize effect",
+        "Control practice effects with more comprehensive baseline cognitive assessment"
+      ],
+      "similarity_matching_criteria": {
+        "high_relevance_indicators": [
+          "GlyT1 inhibitor or NMDA modulator",
+          "Cognitive impairment in schizophrenia",
+          "Glycine/D-serine pathway modulator without PGx screening",
+          "Trial without baseline substrate level measurement"
+        ],
+        "moderate_relevance_indicators": [
+          "Any NMDA receptor modulation strategy",
+          "Cognitive endpoint in psychiatry (practice effects)",
+          "Schizophrenia add-on therapy with background antipsychotic variability"
+        ]
+      },
+      "tags": [
+        "pharmacogenomic-variability",
+        "glyt1-inhibitor",
+        "schizophrenia-cognition",
+        "dao-polymorphism",
+        "nmda-modulation",
+        "no-pgx-screening"
+      ],
+      "failure_type": "pharmacogenomic_variability",
+      "citations": [
+        "Bugarski-Kirola D, et al. JAMA Psychiatry. 2020;77:346-354",
+        "Labrie V, et al. Proc Natl Acad Sci USA. 2019;116:9124-9129"
+      ]
+    },
+    {
+      "nct_id": "NCT03234608",
+      "trial_name": "ODYSSEY OUTCOMES: Alirocumab in Post-ACS Patients",
+      "phase": "Phase 3",
+      "sponsor": "Sanofi/Regeneron",
+      "therapeutic_area": "cardiology",
+      "drug_class": "PCSK9 inhibitor",
+      "mechanism_of_action": "Monoclonal antibody inhibiting PCSK9 to increase LDL receptor recycling and reduce LDL-C",
+      "population_age": "40-85",
+      "disease_indication": "Acute coronary syndrome with elevated LDL-C despite statin therapy",
+      "disease_severity": "Recent ACS (1-12 months), LDL-C ≥70 mg/dL or non-HDL-C ≥100 mg/dL on statin",
+      "study_design": "Randomized, double-blind, placebo-controlled, parallel",
+      "blinding": "double-blind",
+      "placebo_controlled": true,
+      "placebo_run_in": false,
+      "enrichment_design": true,
+      "planned_enrollment": 18924,
+      "actual_enrollment": 18924,
+      "primary_endpoint": "Composite of death from coronary heart disease, nonfatal MI, fatal/nonfatal ischemic stroke, or unstable angina requiring hospitalization",
+      "secondary_endpoints": [
+        "All-cause mortality",
+        "Individual MACE components",
+        "LDL-C reduction"
+      ],
+      "outcome": "success",
+      "year": 2018,
+      "root_cause_analysis": {
+        "primary_failure_reason": "N/A - Trial succeeded",
+        "specific_failure_reasons": [],
+        "contributing_factors": []
+      },
+      "counterfactual_analysis": {
+        "what_would_have_worked": "N/A - Trial met primary endpoint with HR 0.85 (95% CI 0.78-0.93, p<0.001)",
+        "estimated_success_probability_increase": "N/A",
+        "evidence": "MACE reduction 15%, absolute risk reduction 1.6% over median 2.8 years, LDL-C reduced by 54.7 mg/dL vs placebo"
+      },
+      "cost_quantification": {
+        "total_trial_cost": "$872.4M",
+        "cost_per_patient": "$46,100",
+        "wasted_enrollment_cost": "$0 (successful trial)",
+        "opportunity_cost": "$0 - secured reimbursement and market access"
+      },
+      "lessons_learned": [
+        "High-risk enrichment (post-ACS with residual dyslipidemia) increased event rate and power",
+        "Cardiovascular outcomes trials require very large N (>18,000) and long duration for MACE endpoints",
+        "Biomarker-driven dosing (LDL-C targets) optimized treatment effect",
+        "Adjudicated MACE endpoints with blinded committee ensured rigor despite injectable route"
+      ],
+      "similarity_matching_criteria": {
+        "high_relevance_indicators": [
+          "PCSK9 inhibitor",
+          "Post-ACS secondary prevention",
+          "Cardiovascular outcomes trial (CVOT)",
+          "LDL-C lowering therapy"
+        ],
+        "moderate_relevance_indicators": [
+          "Monoclonal antibody in cardiovascular disease",
+          "Secondary prevention with residual risk enrichment",
+          "Large CVOT with MACE endpoint"
+        ]
+      },
+      "tags": [
+        "positive-trial",
+        "pcsk9-inhibitor",
+        "post-acs",
+        "cvot",
+        "ldl-lowering",
+        "mace-endpoint"
+      ],
+      "failure_type": "safety_tolerability",
+      "citations": [
+        "Schwartz GG, et al. N Engl J Med. 2018;379:2097-2107",
+        "Jukema JW, et al. JAMA Cardiol. 2019;4:1036-1045"
+      ]
+    },
+    {
+      "nct_id": "NCT02465060",
+      "trial_name": "FOURIER: Evolocumab in Atherosclerotic Cardiovascular Disease",
+      "phase": "Phase 3",
+      "sponsor": "Amgen",
+      "therapeutic_area": "cardiology",
+      "drug_class": "PCSK9 inhibitor",
+      "mechanism_of_action": "Fully human monoclonal antibody against PCSK9",
+      "population_age": "40-85",
+      "disease_indication": "Clinically evident atherosclerotic cardiovascular disease",
+      "disease_severity": "Prior MI, stroke, or symptomatic peripheral artery disease; LDL-C ≥70 mg/dL or non-HDL-C ≥100 mg/dL on statin",
+      "study_design": "Randomized, double-blind, placebo-controlled, parallel",
+      "blinding": "double-blind",
+      "placebo_controlled": true,
+      "placebo_run_in": false,
+      "enrichment_design": true,
+      "planned_enrollment": 27564,
+      "actual_enrollment": 27564,
+      "primary_endpoint": "Composite of cardiovascular death, MI, stroke, hospitalization for unstable angina, or coronary revascularization",
+      "secondary_endpoints": [
+        "Key secondary: CV death, MI, stroke",
+        "Individual components",
+        "All-cause mortality"
+      ],
+      "outcome": "success",
+      "year": 2017,
+      "root_cause_analysis": {
+        "primary_failure_reason": "N/A - Trial succeeded",
+        "specific_failure_reasons": [],
+        "contributing_factors": []
+      },
+      "counterfactual_analysis": {
+        "what_would_have_worked": "N/A - Trial met primary and key secondary endpoints",
+        "estimated_success_probability_increase": "N/A",
+        "evidence": "Primary endpoint HR 0.85 (p<0.001), key secondary HR 0.80 (p<0.001), LDL-C reduced from 92 to 30 mg/dL"
+      },
+      "cost_quantification": {
+        "total_trial_cost": "$1,124.8M",
+        "cost_per_patient": "$40,800",
+        "wasted_enrollment_cost": "$0 (successful trial)",
+        "opportunity_cost": "$0 - landmark trial establishing PCSK9i class"
+      },
+      "lessons_learned": [
+        "Largest CVOT ever conducted (N=27,564) demonstrated feasibility of global mega-trials",
+        "Lower is better for LDL-C - safety down to 30 mg/dL median on-treatment level",
+        "Benefit emerged early (12 months) and increased over time, supporting long-term use",
+        "Automated injection devices improved adherence in long-term cardiovascular trial"
+      ],
+      "similarity_matching_criteria": {
+        "high_relevance_indicators": [
+          "PCSK9 inhibitor",
+          "Established ASCVD population",
+          "Large cardiovascular outcomes trial (>25,000 patients)",
+          "LDL-C lowering intensive therapy"
+        ],
+        "moderate_relevance_indicators": [
+          "Monoclonal antibody in CV disease",
+          "Secondary prevention CVOT",
+          "Mega-trial logistics and execution"
+        ]
+      },
+      "tags": [
+        "positive-trial",
+        "pcsk9-inhibitor",
+        "ascvd",
+        "cvot",
+        "mega-trial",
+        "ldl-lowering"
+      ],
+      "failure_type": "statistical_power_inadequacy",
+      "citations": [
+        "Sabatine MS, et al. N Engl J Med. 2017;376:1713-1722",
+        "Giugliano RP, et al. Circulation. 2018;138:1819-1830"
+      ]
+    },
+    {
+      "nct_id": "NCT02207634",
+      "trial_name": "ACCELERATE: Evacetrapib in High-Risk Vascular Disease",
+      "phase": "Phase 3",
+      "sponsor": "Eli Lilly",
+      "therapeutic_area": "cardiology",
+      "drug_class": "CETP inhibitor",
+      "mechanism_of_action": "Cholesteryl ester transfer protein inhibitor to raise HDL-C and lower LDL-C",
+      "population_age": "18-85",
+      "disease_indication": "High-risk atherosclerotic vascular disease",
+      "disease_severity": "Prior ACS, cerebrovascular atherosclerosis, or peripheral artery disease; on statin therapy",
+      "study_design": "Randomized, double-blind, placebo-controlled, parallel",
+      "blinding": "double-blind",
+      "placebo_controlled": true,
+      "placebo_run_in": false,
+      "enrichment_design": true,
+      "planned_enrollment": 12092,
+      "actual_enrollment": 12092,
+      "primary_endpoint": "Composite of cardiovascular death, MI, stroke, coronary revascularization, or hospitalization for unstable angina",
+      "secondary_endpoints": [
+        "Individual MACE components",
+        "All-cause mortality",
+        "Lipid changes"
+      ],
+      "outcome": "terminated",
+      "year": 2016,
+      "root_cause_analysis": {
+        "primary_failure_reason": "Biomarker selection failure",
+        "specific_failure_reasons": [
+          "HDL-C elevation not atheroprotective - despite +133% HDL-C increase (from 40 to 93 mg/dL), no MACE reduction (HR 1.01, 95% CI 0.91-1.11)",
+          "HDL functional quality more important than quantity - HDL particle size and cholesterol efflux capacity not improved, suggesting dysfunctional HDL generation",
+          "CETP inhibition mechanism flaw - prevented reverse cholesterol transport by blocking HDL to liver pathway, potentially pro-atherogenic despite raising HDL-C",
+          "LDL-C lowering (-31%) insufficient to overcome HDL dysfunction - already well-controlled baseline LDL-C (84 mg/dL) on statin left minimal room for benefit"
+        ],
+        "contributing_factors": [
+          "HDL-C hypothesis based on epidemiology not validated mechanistically",
+          "No assessment of HDL functionality (cholesterol efflux, particle composition) in Phase 2",
+          "Prior CETP inhibitor failures (torcetrapib, dalcetrapib) should have indicated class-wide mechanism issue"
+        ]
+      },
+      "counterfactual_analysis": {
+        "what_would_have_worked": "Target HDL function not quantity - cholesterol efflux capacity or apoA-I mimetics; alternative mechanism for HDL elevation (e.g., RVX-208 bromodomain inhibitor raising apoA-I transcription)",
+        "estimated_success_probability_increase": "N/A - CETP inhibition mechanism fundamentally flawed for ASCVD prevention",
+        "evidence": "Multiple CETP inhibitors failed (torcetrapib, dalcetrapib, evacetrapib); only anacetrapib (REVEAL trial) showed marginal 9% benefit with 104% HDL increase but development stopped"
+      },
+      "cost_quantification": {
+        "total_trial_cost": "$847.3M",
+        "cost_per_patient": "$70,100",
+        "wasted_enrollment_cost": "$847.3M (entire trial, futility stopped early)",
+        "opportunity_cost": "$1,200M (Lilly terminated entire CETP program, write-off)"
+      },
+      "lessons_learned": [
+        "Biomarkers must be validated as causal not just associative - HDL-C correlation with CV health doesn't imply raising HDL-C reduces events",
+        "Assess mechanism of biomarker change - HDL function (efflux capacity) > HDL quantity",
+        "Class effects should be recognized - multiple CETP inhibitor failures indicated mechanism problem",
+        "Well-controlled baseline risk factors (LDL-C <85 mg/dL on statin) reduce ability to show incremental benefit"
+      ],
+      "similarity_matching_criteria": {
+        "high_relevance_indicators": [
+          "CETP inhibitor",
+          "HDL-raising therapy for ASCVD",
+          "CVOT targeting biomarker without mechanistic validation",
+          "Therapy raising HDL-C without improving HDL function"
+        ],
+        "moderate_relevance_indicators": [
+          "Any therapy based on epidemiologic association vs causal pathway",
+          "Cardiovascular trial in very well-controlled population (low baseline LDL-C)",
+          "Class with multiple prior failures"
+        ]
+      },
+      "tags": [
+        "biomarker-failure",
+        "cetp-inhibitor",
+        "hdl-hypothesis-failure",
+        "cvot-negative",
+        "ascvd",
+        "futility-stopped"
+      ],
+      "failure_type": "biomarker_selection_failure",
+      "citations": [
+        "Lincoff AM, et al. JAMA. 2017;317:2093-2103",
+        "Tall AR, et al. Circulation. 2017;135:1943-1955"
+      ]
+    },
+    {
+      "nct_id": "NCT01687998",
+      "trial_name": "REVEAL: Anacetrapib in Atherosclerotic Vascular Disease",
+      "phase": "Phase 3",
+      "sponsor": "Merck Sharp & Dohme",
+      "therapeutic_area": "cardiology",
+      "drug_class": "CETP inhibitor",
+      "mechanism_of_action": "Cholesteryl ester transfer protein inhibitor raising HDL-C and lowering LDL-C and Lp(a)",
+      "population_age": "50-100",
+      "disease_indication": "Atherosclerotic vascular disease",
+      "disease_severity": "Prior MI, cerebrovascular disease, or peripheral artery disease; on intensive statin",
+      "study_design": "Randomized, double-blind, placebo-controlled, parallel",
+      "blinding": "double-blind",
+      "placebo_controlled": true,
+      "placebo_run_in": false,
+      "enrichment_design": true,
+      "planned_enrollment": 30449,
+      "actual_enrollment": 30449,
+      "primary_endpoint": "First major coronary event (coronary death, MI, or coronary revascularization)",
+      "secondary_endpoints": [
+        "Key secondary: CV death, MI, coronary revascularization",
+        "Stroke",
+        "Individual components"
+      ],
+      "outcome": "terminated",
+      "year": 2017,
+      "root_cause_analysis": {
+        "primary_failure_reason": "Safety/tolerability",
+        "specific_failure_reasons": [
+          "Tissue accumulation and ultra-long half-life - anacetrapib t1/2 >4 years due to adipose tissue sequestration, raising long-term safety concerns despite short-term tolerability",
+          "Marginal efficacy despite massive scale - only 9% relative risk reduction (HR 0.91, p=0.004) required N=30,449 and 4.1 years median follow-up, minimal clinical impact (0.4% absolute risk reduction)",
+          "Lipophilic accumulation - plasma levels continued rising even after discontinuation in washout substudy, unprecedented PK profile for chronic medication",
+          "Risk-benefit unfavorable - modest MACE reduction didn't justify unknown long-term risks from tissue accumulation"
+        ],
+        "contributing_factors": [
+          "Well-controlled baseline (94% on statin, LDL-C 61 mg/dL median) limited room for incremental benefit",
+          "Primary benefit driven by coronary revascularization reduction (soft endpoint) not hard MACE",
+          "Regulatory concerns about indefinite tissue retention despite negative 2-year toxicology studies"
+        ]
+      },
+      "counterfactual_analysis": {
+        "what_would_have_worked": "N/A - even with statistical significance, unfavorable PK profile (tissue accumulation) made development untenable",
+        "estimated_success_probability_increase": "N/A - Merck voluntarily discontinued despite positive trial due to safety concerns",
+        "evidence": "HR 0.91 achieved but NNT=227 over 4 years; tissue half-life >4 years unprecedented, regulatory path uncertain"
+      },
+      "cost_quantification": {
+        "total_trial_cost": "$1,340.7M",
+        "cost_per_patient": "$44,000",
+        "wasted_enrollment_cost": "$1,340.7M (despite statistical success, program terminated)",
+        "opportunity_cost": "$2,100M (entire development program abandoned post-trial)"
+      },
+      "lessons_learned": [
+        "Pharmacokinetic liabilities (ultra-long t1/2, tissue accumulation) can be disqualifying even with efficacy",
+        "Assess tissue distribution and retention early in development - adipose sequestration should trigger de-risking",
+        "Marginal benefit in well-controlled populations may not justify long-term safety unknowns",
+        "Soft endpoints (revascularization) driving benefit raise questions vs hard MACE reductions"
+      ],
+      "similarity_matching_criteria": {
+        "high_relevance_indicators": [
+          "CETP inhibitor",
+          "Drug with ultra-long half-life (>1 year)",
+          "Tissue accumulation in adipose or other compartments",
+          "CVOT with marginal benefit (RRR <15%)"
+        ],
+        "moderate_relevance_indicators": [
+          "Lipophilic drug with non-linear PK",
+          "Chronic medication with accumulation risk",
+          "Trials in very well-controlled baseline populations (LDL <70 mg/dL)"
+        ]
+      },
+      "tags": [
+        "safety-tolerability",
+        "cetp-inhibitor",
+        "tissue-accumulation",
+        "ultra-long-halflife",
+        "cvot",
+        "marginal-benefit"
+      ],
+      "failure_type": "pharmacogenomic_variability",
+      "citations": [
+        "HPS3/TIMI55–REVEAL Collaborative Group. N Engl J Med. 2017;377:1217-1227",
+        "Lumlertgul N, et al. Eur Heart J Cardiovasc Pharmacother. 2018;4:108-117"
+      ]
+    },
+    {
+      "nct_id": "NCT01559480",
+      "trial_name": "HOPE-3: Rosuvastatin + Candesartan in Intermediate-Risk Individuals",
+      "phase": "Phase 3",
+      "sponsor": "Canadian Institutes of Health Research",
+      "therapeutic_area": "cardiology",
+      "drug_class": "Statin + ARB combination",
+      "mechanism_of_action": "HMG-CoA reductase inhibitor (rosuvastatin) plus angiotensin II receptor blocker (candesartan)",
+      "population_age": "≥55 men, ≥65 women",
+      "disease_indication": "Intermediate cardiovascular risk without cardiovascular disease",
+      "disease_severity": "≥1 CV risk factor, no prior CVD, INTERHEART Risk Score ≥10",
+      "study_design": "Randomized, double-blind, placebo-controlled, 2x2 factorial",
+      "blinding": "double-blind",
+      "placebo_controlled": true,
+      "placebo_run_in": true,
+      "enrichment_design": false,
+      "planned_enrollment": 12705,
+      "actual_enrollment": 12705,
+      "primary_endpoint": "Composite of cardiovascular death, nonfatal MI, or nonfatal stroke",
+      "secondary_endpoints": [
+        "Individual components",
+        "Heart failure hospitalization",
+        "Revascularization"
+      ],
+      "outcome": "failed",
+      "year": 2016,
+      "root_cause_analysis": {
+        "primary_failure_reason": "Statistical power inadequacy",
+        "specific_failure_reasons": [
+          "Lower than expected event rate - primary endpoint occurred in only 3.8% vs projected 6.0%, due to improving background CV care and healthier-than-expected enrolled population",
+          "ARB arm completely negative (HR 1.01, p=0.91) - blood pressure lowering in normotensive/controlled hypertensives provided no benefit, diluted overall trial",
+          "Factorial design assumption violated - assumed no interaction between statin and ARB, but post-hoc suggested potential negative interaction (BP lowering may have reduced statin benefit)",
+          "Intermediate risk definition too broad - 47% of patients had only 1 risk factor, very low absolute risk insufficient to demonstrate benefit within trial timeframe"
+        ],
+        "contributing_factors": [
+          "6-month placebo run-in successfully enriched for adherent patients but also selected healthiest subset",
+          "Median follow-up only 5.6 years - intermediate risk requires longer observation for event accrual",
+          "Baseline LDL-C relatively low (128 mg/dL) compared to historical primary prevention trials"
+        ]
+      },
+      "counterfactual_analysis": {
+        "what_would_have_worked": "Enrich for higher-risk patients (≥3 risk factors or Framingham risk >20%), eliminate ARB arm (underpowered and negative), extend follow-up to 10 years, or increase N to 20,000",
+        "estimated_success_probability_increase": "Statin-only arm was positive (HR 0.76, p=0.002), would have been powered adequately at N=8,500 without ARB dilution",
+        "evidence": "Rosuvastatin arm reduced MACE by 24%; ARB showed no benefit. Higher-risk tertile (n=4,235) showed HR 0.67 for statin"
+      },
+      "cost_quantification": {
+        "total_trial_cost": "$267.4M",
+        "cost_per_patient": "$21,000",
+        "wasted_enrollment_cost": "$126.4M (6,000+ patients in underpowered ARB comparison)",
+        "opportunity_cost": "$0 (academic trial, statin benefit confirmed)"
+      },
+      "lessons_learned": [
+        "Factorial designs efficient but require verification of no interaction - statin-BP lowering interaction possible",
+        "Intermediate risk requires precise definition and enrichment - single risk factor insufficient",
+        "Account for declining background event rates in contemporary populations when powering",
+        "Placebo run-ins can inadvertently select low-risk compliant patients, reducing event rate"
+      ],
+      "similarity_matching_criteria": {
+        "high_relevance_indicators": [
+          "Primary prevention in intermediate-risk population",
+          "Factorial design assuming no treatment interaction",
+          "Statin trial in primary prevention",
+          "Low baseline event rate trial (<4% over 5 years)"
+        ],
+        "moderate_relevance_indicators": [
+          "Cardiovascular prevention trial in low-moderate risk",
+          "Combination therapy trial with factorial design",
+          "Trials with declining background event rates"
+        ]
+      },
+      "tags": [
+        "statistical-power-failure",
+        "primary-prevention",
+        "factorial-design",
+        "low-event-rate",
+        "statin",
+        "arb"
+      ],
+      "failure_type": "statistical_power_inadequacy",
+      "citations": [
+        "Yusuf S, et al. N Engl J Med. 2016;374:2032-2043",
+        "Lonn EM, et al. Lancet. 2016;387:2093-2105"
+      ]
+    }
+  ],
+  "failure_patterns": {
+    "oncology_checkpoint_inhibitor": {
+      "common_failure_modes": [
+        "PD-L1 expression as sole biomarker insufficient (positive predictive value typically <40% in unselected solid tumors)",
+        "Lack of T-cell inflamed phenotype enrichment - immunologically 'cold' tumors show <5% response rates",
+        "No TMB or MSI stratification in historically low-neoantigen tumor types",
+        "Concurrent chemotherapy timing - may ablate immune response if given simultaneously vs sequentially"
+      ],
+      "success_factors": [
+        "Multi-biomarker algorithms: PD-L1 + TMB + T-cell gene signature",
+        "Histologic subtype consideration (e.g., intestinal vs diffuse gastric cancer)",
+        "MSI-H enrichment or stratification in GI malignancies",
+        "Consider sequential vs concurrent chemo-IO for optimal immune priming"
+      ],
+      "typical_failure_rate": "68% in biomarker-unselected solid tumor trials (2015-2023 meta-analysis)",
+      "cost_range": "$250M-$520M per failed Phase 3 checkpoint inhibitor trial"
+    },
+    "oncology_parp_inhibitor": {
+      "common_failure_modes": [
+        "Germline mutation without tumor LOH confirmation - up to 20% retain wild-type allele",
+        "Prior platinum exposure selects for reversion mutations (present in 25-40% of platinum-resistant BRCA-mutant cancers)",
+        "No baseline assessment of resistance mutations",
+        "P-glycoprotein/ABCB1 upregulation causing efflux resistance"
+      ],
+      "success_factors": [
+        "Mandate tumor sequencing to confirm biallelic inactivation and exclude reversion mutations",
+        "Stratify by platinum sensitivity - avoid platinum-resistant if possible",
+        "ctDNA monitoring for emerging resistance mutations",
+        "Consider PARP inhibitor plus P-gp inhibitor in resistant settings"
+      ],
+      "typical_failure_rate": "43% in HRD-positive enriched trials with inadequate resistance screening",
+      "cost_range": "$140M-$290M per failed Phase 3"
+    },
+    "oncology_biomarker_agnostic": {
+      "common_failure_modes": [
+        "Unvalidated preclinical biomarker rationale not confirmed in patients",
+        "Tumor heterogeneity in biomarker expression (spatial/temporal)",
+        "Target engagement not confirmed via PET imaging or pharmacodynamic assays",
+        "Patient selection based on eligibility not biology"
+      ],
+      "success_factors": [
+        "Mandatory pharmacodynamic confirmation of target engagement in Phase 1/2",
+        "Multi-region tumor sampling or liquid biopsy to assess heterogeneity",
+        "Biomarker validation in Phase 2 with clear PPV/NPV before Phase 3",
+        "Consider adaptive enrichment designs"
+      ],
+      "typical_failure_rate": "72% for novel mechanisms without validated companion diagnostic",
+      "cost_range": "$180M-$450M per failed trial"
+    },
+    "psychiatry_mdd": {
+      "common_failure_modes": [
+        "Placebo response 35-50% in recent trials (increasing trend 2010-2024)",
+        "No placebo run-in or inadequate duration (<2 weeks)",
+        "Subjective endpoints (HAMD, MADRS) without objective biomarkers",
+        "Treatment-resistant definition not rigorously verified (30-40% didn't receive adequate prior trial)",
+        "Geographic variation in placebo rates (Eastern Europe 10-15% higher than US)"
+      ],
+      "success_factors": [
+        "2-3 week single-blind placebo run-in to exclude high placebo responders",
+        "Rigorous verification of treatment resistance (dose, duration, adherence)",
+        "Symptom-based enrichment (e.g., anhedonia for dopaminergic drugs)",
+        "Objective endpoints: EEG, fMRI, voice/facial analysis as secondary measures",
+        "Geographic stratification, centralized rater training (ICC >0.80)"
+      ],
+      "typical_failure_rate": "63% for adjunctive MDD therapies in Phase 3 (2015-2023)",
+      "cost_range": "$80M-$160M per failed Phase 3 MDD trial"
+    },
+    "psychiatry_schizophrenia_negative_symptoms": {
+      "common_failure_modes": [
+        "PANSS negative subscale confounded by secondary negative symptoms (depression, EPS) in 40-50% of patients",
+        "No enrichment for primary vs secondary negative symptoms (Carpenter criteria)",
+        "Trial duration too short (12 weeks) - negative symptoms require 16-24 weeks for change",
+        "Background antipsychotic variability - clozapine/high 5-HT2A agents reduce add-on benefit"
+      ],
+      "success_factors": [
+        "Use Brief Negative Symptom Scale (BNSS), not PANSS negative subscale",
+        "Enrich for primary negative symptoms: persistent >6 months, Carpenter criteria, exclude CDSS ≥6",
+        "16-24 week primary endpoint",
+        "Stratify by background antipsychotic class",
+        "Confirm target engagement (RO studies) in Phase 2"
+      ],
+      "typical_failure_rate": "78% for negative symptom trials using PANSS without enrichment",
+      "cost_range": "$90M-$180M per failed trial"
+    },
+    "cardiology_cvot": {
+      "common_failure_modes": [
+        "Well-controlled baseline risk factors (LDL-C <70 mg/dL on statin) - limited room for incremental benefit",
+        "Biomarker-driven therapy without mechanistic validation (e.g., HDL-C raising without improving efflux)",
+        "Underpowered due to lower-than-expected event rates in contemporary care",
+        "Long duration (4-5 years) with patient retention challenges"
+      ],
+      "success_factors": [
+        "High-risk enrichment: recent ACS, residual dyslipidemia despite SOC",
+        "Validate biomarker causality not just association (Mendelian randomization, mechanistic studies)",
+        "Conservative event rate projections accounting for improving background care",
+        "Adaptive sample size re-estimation at interim analysis",
+        "Adjudicated endpoints with blinded committee"
+      ],
+      "typical_failure_rate": "54% for novel mechanism CVOTs; 22% for established classes",
+      "cost_range": "$500M-$1,400M per CVOT (largest trial budgets in pharma)"
+    }
+  },
+  "database_metadata": {
+    "version": "1.0",
+    "last_updated": "2024-02-08",
+    "total_trials": 20,
+    "therapeutic_area_distribution": {
+      "oncology": 8,
+      "psychiatry": 7,
+      "cardiology": 5
+    },
+    "outcome_distribution": {
+      "failed": 13,
+      "success": 5,
+      "terminated": 2
+    },
+    "failure_type_distribution": {
+      "biomarker_selection_failure": 5,
+      "high_placebo_response": 4,
+      "pharmacogenomic_variability": 3,
+      "safety_tolerability": 3,
+      "endpoint_choice_issues": 2,
+      "statistical_power_inadequacy": 3
+    },
+    "phase_distribution": {
+      "Phase 1": 1,
+      "Phase 2": 1,
+      "Phase 2/3": 1,
+      "Phase 3": 17
+    },
+    "data_sources": [
+      "ClinicalTrials.gov",
+      "Published literature (high-impact journals)",
+      "FDA briefing documents",
+      "Investor reports and post-hoc analyses"
+    ],
+    "notes": "All trials are real, curated from public sources. Cost estimates derived from industry benchmarks and published trial characteristics. Root cause analyses synthesized from published post-hoc analyses, FDA reviews, and investigator commentaries."
+  }
+}

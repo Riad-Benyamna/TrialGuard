@@ -1,0 +1,132 @@
+# Environment Variables & Secrets
+.env
+.env.local
+.env.*.local
+.env.example.local
+
+# API Keys & Credentials
+GEMINI_API_KEY=*
+API_KEYS
+secrets/
+
+# Demo & Test Files
+demo_protocol.html
+demo_protocol.txt
+DEMO_*.md
+DEMO_*.py
+sample_protocol.txt
+sample_*.json
+test_*.py
+test_*.js
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node / Frontend
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.eslintcache
+dist/
+build/
+.next/
+out/
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.sublime-project
+.sublime-workspace
+*.code-workspace
+
+# OS
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Local Development
+.cache/
+*.tmp
+.env.local.py
+.vite/
+.parcel-cache
+
+# Analysis Storage (local test files, not to be committed)
+backend/app/data/analyses/saved_analyses.json
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# Project Specific
+.idea/
+*.swp
+.project
+.pydevproject
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Database & Data Files
+*.db
+*.sqlite
+*.sqlite3
+*.json~ 
+data.json
+local_*.json
+
+# Backup Files
+*.bak
+*.backup
+*~
+*.tmp
+*.swp
+
+# History files
+.history/
+.bash_history
+.node_history
+
+# Performance profiling
+perf/
+*.prof
