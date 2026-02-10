@@ -32,8 +32,8 @@ class Settings(BaseSettings):
     # Gemini Configuration
     # Can be overridden by GEMINI_FLASH_MODEL and GEMINI_PRO_MODEL env vars
     # If models not found, check: https://ai.google.dev/models
-    gemini_flash_model: str = "gemini-3-flash"
-    gemini_pro_model: str = "gemini-3-pro"
+    gemini_flash_model: str = "gemini-3-flash-preview"
+    gemini_pro_model: str = "gemini-3-pro-preview"
     gemini_rate_limit_rpm: int = 60  # Requests per minute
     gemini_max_retries: int = 3
 
