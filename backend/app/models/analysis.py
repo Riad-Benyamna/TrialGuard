@@ -2,8 +2,8 @@
 Pydantic models for risk analysis results.
 """
 
-from pydantic import BaseModel, Field
-from typing import List, Optional, Dict
+from pydantic import BaseModel, Field, ConfigDict
+from typing import List, Optional, Dict, Any
 from enum import Enum
 from datetime import datetime
 
@@ -125,8 +125,10 @@ class RiskAnalysis(BaseModel):
 
 class AnalysisRequest(BaseModel):
     """Request for protocol risk analysis"""
-    protocol: dict  # ClinicalProtocol as dict
-    use_function_calling: bool = True
+    protocol: Dict[str, Any] = Field(..., description="Protocol data as dictionary")
+    use_function_calling: bool = Field(default=True, description="Enable function calling in Gemini")
+
+    model_config = ConfigDict(extra='allow')  # Allow extra fields for flexibility
 
 
 class AnalysisResponse(BaseModel):

@@ -347,7 +347,33 @@ async def analyze_protocol(request: AnalysisRequest):
     Returns Server-Sent Events stream.
     """
     analysis_id = str(uuid.uuid4())
+    
+    # Log request details for debugging
     logger.info(f"Starting analysis {analysis_id}")
+    logger.debug(f"Protocol keys: {list(request.protocol.keys())}")
+    logger.debug(f"Use function calling: {request.use_function_calling}")
+    
+    # Validate protocol is not empty
+    if not request.protocol:
+        raise HTTPException(
+            status_code=400,
+            detail="Protocol data cannot be empty"
+        )
+    
+    # Check that protocol has at least a trial name or description
+    has_content = any([
+        request.protocol.get("trial_name"),
+        request.protocol.get("description"),
+        request.protocol.get("drug_profile"),
+        request.protocol.get("metadata"),
+    ])
+    
+    if not has_content:
+        logger.warning(f"Analysis {analysis_id}: Protocol has no content")
+        raise HTTPException(
+            status_code=400,
+            detail="Protocol must contain at least basic information (trial name, description, or drug profile)"
+        )
 
     return EventSourceResponse(
         progress_generator(

@@ -42,8 +42,28 @@ export const analyzeProtocol = async (protocolData) => {
   });
 
   if (!response.ok) {
-    const errorText = await response.text();
-    throw new Error(`Analysis failed: ${response.status} ${errorText}`);
+    let errorMessage = `Analysis failed with status ${response.status}`;
+    try {
+      const errorData = await response.json();
+      if (errorData.detail) {
+        errorMessage = errorData.detail;
+      } else if (errorData.errors) {
+        // Handle validation errors
+        const errors = Array.isArray(errorData.errors) 
+          ? errorData.errors.map(e => `${e.field}: ${e.message}`).join("; ")
+          : JSON.stringify(errorData.errors);
+        errorMessage = `Validation error: ${errors}`;
+      }
+    } catch (e) {
+      // If can't parse JSON, try text
+      try {
+        const text = await response.text();
+        if (text) errorMessage = `Analysis failed: ${response.status} - ${text.substring(0, 200)}`;
+      } catch (e2) {
+        // Ignore
+      }
+    }
+    throw new Error(errorMessage);
   }
 
   // Parse SSE stream to get the final result
@@ -166,29 +186,44 @@ export const analyzePDF = async (file, onProgress) => {
   const formData = new FormData();
   formData.append('file', file);
 
-  const parseResponse = await axios.post(
-    `${API_BASE_URL}${API_ENDPOINTS.PARSE_PDF}`,
-    formData,
-    {
-      headers: { 'Content-Type': 'multipart/form-data' },
-      timeout: 120000,
-      onUploadProgress: (progressEvent) => {
-        if (onProgress && progressEvent.total) {
-          const pct = Math.round((progressEvent.loaded * 100) / progressEvent.total);
-          onProgress(Math.min(pct * 0.3, 30)); // Upload is 0-30%
-        }
-      },
+  try {
+    const parseResponse = await axios.post(
+      `${API_BASE_URL}${API_ENDPOINTS.PARSE_PDF}`,
+      formData,
+      {
+        headers: { 'Content-Type': 'multipart/form-data' },
+        timeout: 120000,
+        onUploadProgress: (progressEvent) => {
+          if (onProgress && progressEvent.total) {
+            const pct = Math.round((progressEvent.loaded * 100) / progressEvent.total);
+            onProgress(Math.min(pct * 0.3, 30)); // Upload is 0-30%
+          }
+        },
+      }
+    );
+
+    const parsedProtocol = parseResponse.data?.protocol || parseResponse.data;
+    
+    if (!parsedProtocol || Object.keys(parsedProtocol).length === 0) {
+      throw new Error("PDF parsing returned empty protocol data. Please ensure the PDF contains valid protocol information.");
     }
-  );
+    
+    if (onProgress) onProgress(40);
 
-  const parsedProtocol = parseResponse.data?.protocol || parseResponse.data;
-  if (onProgress) onProgress(40);
+    // Step 2: Analyze the parsed protocol
+    const result = await analyzeProtocol(parsedProtocol);
+    if (onProgress) onProgress(100);
 
-  // Step 2: Analyze the parsed protocol
-  const result = await analyzeProtocol(parsedProtocol);
-  if (onProgress) onProgress(100);
-
-  return result;
+    return result;
+  } catch (error) {
+    if (error.response?.status === 422) {
+      throw new Error(`PDF parsing validation failed: ${error.response?.data?.detail || error.message}`);
+    } else if (error.response?.status === 400) {
+      throw new Error(`PDF parsing error: ${error.response?.data?.detail || error.message}`);
+    } else {
+      throw error;
+    }
+  }
 };
 
 /**

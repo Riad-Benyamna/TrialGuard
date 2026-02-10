@@ -8,6 +8,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
+from fastapi.exceptions import RequestValidationError
 from contextlib import asynccontextmanager
 import logging
 from pathlib import Path
@@ -63,6 +64,30 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+# Custom validation error handler for better debugging
+@app.exception_handler(RequestValidationError)
+async def validation_exception_handler(request, exc):
+    """Handle Pydantic validation errors with detailed info"""
+    logger.error(f"Validation error on {request.url.path}: {exc.errors()}")
+    
+    errors = []
+    for error in exc.errors():
+        errors.append({
+            "field": ".".join(str(x) for x in error["loc"][1:]),  # Skip "body"
+            "type": error["type"],
+            "message": error["msg"],
+            "value": str(error.get("input", ""))[:100]  # Truncate large values
+        })
+    
+    return JSONResponse(
+        status_code=422,
+        content={
+            "detail": "Request validation failed",
+            "errors": errors
+        }
+    )
 
 
 # Health check endpoint
