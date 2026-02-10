@@ -1,13 +1,16 @@
 """
 TrialGuard FastAPI Application
 Main entry point for the backend API server.
+Serves React frontend from /static and API from /api/
 """
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, FileResponse
+from fastapi.staticfiles import StaticFiles
 from contextlib import asynccontextmanager
 import logging
+from pathlib import Path
 
 from app.config import settings
 from app.api import protocol, analysis, chat, history
@@ -63,18 +66,7 @@ app.add_middleware(
 
 
 # Health check endpoint
-@app.get("/")
-async def root():
-    """Root endpoint - health check"""
-    return {
-        "status": "healthy",
-        "application": settings.app_name,
-        "version": settings.app_version,
-        "message": "TrialGuard API is running"
-    }
-
-
-@app.get("/health")
+@app.get("/api/health")
 async def health_check():
     """Detailed health check"""
     db_service = get_historical_db_service()
@@ -126,6 +118,51 @@ async def global_exception_handler(request, exc):
             "message": str(exc) if settings.debug else "An error occurred processing your request"
         }
     )
+
+
+# Setup static files and SPA routing
+# Determine static directory path
+static_dir = Path(__file__).parent / "static"
+
+# Try to mount static files if directory exists
+if static_dir.exists():
+    logger.info(f"Mounting static files from {static_dir}")
+    
+    # Mount static files at root / for CSS, JS, images, etc.
+    app.mount("", StaticFiles(directory=str(static_dir), html=True), name="assets")
+    
+    # SPA catch-all: serve index.html for all unmatched routes (React Router)
+    # Note: This needs to come after the StaticFiles mount
+    @app.get("/{full_path:path}")
+    async def serve_spa(full_path: str):
+        """
+        Serve React SPA
+        All unmatched routes serve index.html for client-side routing
+        """
+        index_file = static_dir / "index.html"
+        if index_file.exists():
+            return FileResponse(index_file)
+        else:
+            logger.warning(f"index.html not found at {index_file}")
+            return JSONResponse(
+                status_code=404,
+                content={"error": "Frontend not found"}
+            )
+else:
+    logger.warning(f"Static directory not found at {static_dir}")
+    logger.warning("Frontend will not be served. Ensure Dockerfile correctly copies built frontend.")
+    
+    # Fallback: API-only mode
+    @app.get("/")
+    async def root():
+        """Root endpoint - API only mode"""
+        return {
+            "status": "healthy",
+            "application": settings.app_name,
+            "version": settings.app_version,
+            "message": "TrialGuard API is running (frontend not available)",
+            "api_docs": "/docs"
+        }
 
 
 if __name__ == "__main__":
