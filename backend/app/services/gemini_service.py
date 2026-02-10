@@ -8,6 +8,7 @@ from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_excep
 import json
 import hashlib
 import asyncio
+import logging
 from typing import Optional, Dict, List, AsyncGenerator
 from datetime import datetime, timedelta
 import time
@@ -21,6 +22,9 @@ from app.utils.prompts import (
     CHAT_SYSTEM_PROMPT,
     FUNCTION_CALLING_TOOLS
 )
+
+# Configure logger
+logger = logging.getLogger(__name__)
 
 
 class RateLimiter:
