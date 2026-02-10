@@ -30,8 +30,10 @@ class Settings(BaseSettings):
     cors_origins: list[str] = ["http://localhost:3000", "http://localhost:3001", "http://localhost:3002", "http://localhost:3003", "http://localhost:3004", "http://localhost:5173"]
 
     # Gemini Configuration
-    gemini_flash_model: str = "gemini-3-flash-preview"
-    gemini_pro_model: str = "gemini-3-pro-preview"
+    # Can be overridden by GEMINI_FLASH_MODEL and GEMINI_PRO_MODEL env vars
+    # If models not found, check: https://ai.google.dev/models
+    gemini_flash_model: str = "gemini-3.0-flash"
+    gemini_pro_model: str = "gemini-3.0-pro"
     gemini_rate_limit_rpm: int = 60  # Requests per minute
     gemini_max_retries: int = 3
 

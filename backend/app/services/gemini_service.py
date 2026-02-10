@@ -89,9 +89,21 @@ class GeminiService:
         # Configure API
         genai.configure(api_key=settings.gemini_api_key)
 
-        # Initialize models
-        self.flash_model = genai.GenerativeModel(settings.gemini_flash_model)
-        self.pro_model = genai.GenerativeModel(settings.gemini_pro_model)
+        # Initialize models with error handling
+        logger.info(f"Initializing Gemini models: Flash={settings.gemini_flash_model}, Pro={settings.gemini_pro_model}")
+        try:
+            self.flash_model = genai.GenerativeModel(settings.gemini_flash_model)
+            logger.info(f"✓ Flash model loaded: {settings.gemini_flash_model}")
+        except Exception as e:
+            logger.error(f"Failed to load flash model {settings.gemini_flash_model}: {e}")
+            raise
+        
+        try:
+            self.pro_model = genai.GenerativeModel(settings.gemini_pro_model)
+            logger.info(f"✓ Pro model loaded: {settings.gemini_pro_model}")
+        except Exception as e:
+            logger.error(f"Failed to load pro model {settings.gemini_pro_model}: {e}")
+            raise
 
         # Rate limiting and cost tracking
         self.rate_limiter = RateLimiter(rpm=settings.gemini_rate_limit_rpm)
@@ -178,7 +190,15 @@ class GeminiService:
             return response.text
 
         except Exception as e:
-            print(f"Gemini API error: {str(e)}")
+            model_name = getattr(model, 'model_name', 'unknown')
+            error_msg = str(e)
+            logger.error(f"Gemini API error with model {model_name}: {error_msg}")
+            
+            # Check for model not found errors
+            if "is not found" in error_msg or "not supported" in error_msg:
+                logger.error(f"Model '{model_name}' not found or not supported. Check available models at https://ai.google.dev/models")
+                raise ValueError(f"Model {model_name} is not available. Please use a supported model name. Details: {error_msg}")
+            
             raise
 
     async def parse_protocol_pdf(self, pdf_bytes: bytes) -> dict:
