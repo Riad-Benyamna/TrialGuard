@@ -5,9 +5,9 @@
 TrialGuard is a production-ready web application that uses cutting-edge AI to identify protocol design flaws before clinical trials begin, potentially saving millions in wasted investment.
 
 ![Status](https://img.shields.io/badge/status-production--ready-green)
+![Live](https://img.shields.io/badge/live-https%3A%2F%2Ftrialguard.onrender.com%2F-blue)
 ![Python](https://img.shields.io/badge/python-3.11+-blue)
 ![React](https://img.shields.io/badge/react-18.2+-blue)
-![Free Deploy](https://img.shields.io/badge/deploy-free-brightgreen)
 
 ## Features
 
@@ -29,60 +29,50 @@ TrialGuard is a production-ready web application that uses cutting-edge AI to id
 
 - **FastAPI Backend**: Async Python with proper error handling
 - **React Frontend**: Modern React 18 with Vite
-- **Docker Containerized**: Easy deployment to any cloud platform
+- **Docker Containerized**: Easy deployment to any cloud platform (currently running on Render)
 - **Comprehensive Testing**: Unit and integration tests included
 
 ## Getting Started
 
-### Prerequisites
+### Access the Live Application
 
-- Gemini API key ([Get free key here](https://aistudio.google.com/app/apikey))
+TrialGuard is fully deployed and ready to use:
 
-### Quickest Way: Deploy Free (Recommended)
+**Live URL:** https://trialguard.onrender.com/
 
-Deploy to **Render** (free tier) in 2 minutes:
+No setup required - just visit the link, upload a clinical trial protocol, and get instant AI-powered risk analysis!
 
-1. **Create Render account** - [render.com](https://render.com)
-2. **Connect this GitHub repo**
-3. **Add environment variable:**
-   - Key: `GEMINI_API_KEY`
-   - Value: Your Gemini API key
-4. **Deploy** - Takes ~2 minutes
+### About This Repository
 
-That's it! Your app is live online.
+This is the source code for TrialGuard. If you want to:
 
-### Alternative Free Deployments
+- **Use the app**: Visit https://trialguard.onrender.com/
+- **Contribute code**: Fork this repo and submit a pull request
+- **Your own instance**: See [Customization](#customization) section
 
-**Railway** ([railway.app](https://railway.app))
+### Customization / Local Development
 
-- Same process as Render
-- Very user-friendly
-
-**Vercel** (Frontend) + **Render/Railway** (Backend)
-
-- Split deployment for more control
-
-### Local Development (Optional)
-
-For development work:
+To modify TrialGuard or run locally:
 
 ```bash
 # Clone and setup
-git clone <your-repo-url>
+git clone https://github.com/Riad-Benyamna/TrialGuard.git
 cd trialguard
 
 # Backend
 cd backend
 pip install -r requirements.txt
-cp .env.example .env
+cp ../.env.example .env
 # Edit .env with your GEMINI_API_KEY
-python -m app.main
+python -m uvicorn app.main:app --reload
 
 # Frontend (new terminal)
 cd frontend
 npm install
 npm run dev
 ```
+
+Visit http://localhost:5173 once both are running.
 
 ## Usage Guide
 
@@ -209,11 +199,10 @@ GEMINI_RATE_LIMIT_RPM=60
 MAX_UPLOAD_SIZE_MB=50
 ```
 
-**On Render/Railway:**
+**For custom deployments:**
 
-- Go to Environment Variables section
-- Add `GEMINI_API_KEY` and paste your key
-- Deploy will automatically restart
+- Set `GEMINI_API_KEY` in your hosting platform's environment variables
+- Most platforms auto-restart after environment updates
 
 ### API Rate Limits
 
@@ -269,47 +258,28 @@ cd frontend
 npm test
 ```
 
-## Deployment Guide
+## Customization / Self-Hosting
 
-### Easiest: Render (Recommended)
+### Deploy Your Own Instance
 
-1. Go to [render.com](https://render.com)
-2. Sign up with GitHub
-3. Click "New Service" → Select "Web Service"
-4. Connect this repository
-5. Set environment variables:
-   - `GEMINI_API_KEY` = Your API key
-6. Click "Deploy"
+If you want to run your own instance:
 
-Render handles everything - both frontend and backend deploy in ~2 minutes.
+1. **Fork this repository**
+2. **Connect to Render:** [render.com](https://render.com)
+   - New Service → Web Service
+   - Connect your fork
+   - Add `GEMINI_API_KEY` environment variable
+   - Deploy (~2 minutes)
+3. **Your custom URL is ready!**
 
-### Alternative: Railway
-
-1. Go to [railway.app](https://railway.app)
-2. Click "Create Project"
-3. Select "Deploy from GitHub"
-4. Add environment variables in dashboard
-5. Deploy - takes ~3 minutes
-
-### Alternative: Vercel + Render
-
-**Frontend on Vercel:**
-
-- Push to GitHub
-- Go to [vercel.com](https://vercel.com)
-- Import project
-- Set `VITE_API_URL` to your Render backend URL
-- Deploy
-
-**Backend on Render:**
-
-- Follow Render instructions above
-
-### Docker (Advanced)
+### Docker Deployment
 
 ```bash
-docker-compose up -d
+docker build -t trialguard .
+docker run -e GEMINI_API_KEY=your_key -p 8000:8000 trialguard
 ```
+
+Visit http://localhost:8000
 
 ## Contributing
 
