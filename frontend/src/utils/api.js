@@ -137,7 +137,14 @@ export const analyzeProtocol = async (protocolData) => {
 
   return {
     analysis_id: result.analysis_id || raw.analysis_id,
-    overall_score: raw.risk_score?.overall_score ?? 0,
+    overall_score: (() => {
+      const score = raw.risk_score?.overall_score ?? 0;
+      // If score is on 0-20 scale, convert to 0-100
+      if (score <= 20 && score > 0) {
+        return score * 5;
+      }
+      return score;
+    })(),
     risk_level: raw.risk_score?.risk_level || 'moderate',
     confidence: raw.risk_score?.confidence ?? 0.8,
     risk_breakdown: riskBreakdown,

@@ -148,12 +148,36 @@ const AnalysisResults = () => {
           >
             <div className="bg-white rounded-xl border border-gray-200 p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Executive Summary</h2>
-              <div className="text-gray-700 leading-relaxed prose prose-sm max-w-none">
+              <div className="text-gray-700 leading-relaxed prose prose-sm max-w-none space-y-3">
                 {analysis.executive_summary.split('\n').map((paragraph, idx) => {
+                  if (!paragraph.trim()) return null; // Skip empty lines
+                  
+                  // Handle markdown headings: ### text -> <h3>, ## text -> <h2>, etc.
+                  const headingMatch = paragraph.match(/^(#{1,6})\s+(.+)$/);
+                  if (headingMatch) {
+                    const level = headingMatch[1].length;
+                    const text = headingMatch[2];
+                    const headingClass = {
+                      1: 'text-3xl font-bold',
+                      2: 'text-2xl font-bold',
+                      3: 'text-xl font-bold',
+                      4: 'text-lg font-bold',
+                      5: 'text-base font-bold',
+                      6: 'text-sm font-bold',
+                    }[level] || 'text-base font-bold';
+                    
+                    return (
+                      <div key={idx} className={`${headingClass} text-gray-900 mt-4 mb-2`}>
+                        {text}
+                      </div>
+                    );
+                  }
+                  
                   // Convert **text** to bold and *text* to italic
                   let formattedText = paragraph
                     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
                     .replace(/\*(.*?)\*/g, '<em>$1</em>');
+                  
                   return (
                     <p key={idx} className="mb-3" dangerouslySetInnerHTML={{ __html: formattedText }} />
                   );
