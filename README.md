@@ -42,6 +42,8 @@ TrialGuard is fully deployed and ready to use:
 
 No setup required - just visit the link, upload a clinical trial protocol, and get instant AI-powered risk analysis!
 
+![TrialGuard Dashboard](main1.png)
+
 ### About This Repository
 
 This is the source code for TrialGuard. If you want to:
@@ -78,6 +80,10 @@ Visit http://localhost:5173 once both are running.
 
 ### 1. Input Protocol Data
 
+**Choose Your Input Method:**
+
+![Protocol Input Options](fill_out_options.png)
+
 **Option A: PDF Upload**
 
 - Click "Upload Protocol PDF"
@@ -107,6 +113,8 @@ Visit http://localhost:5173 once both are running.
 ### 3. Review Results
 
 **Risk Score Dashboard:**
+
+![Analysis Results Dashboard](main2.png)
 
 - Overall risk score (0-100 with color coding)
 - Category breakdown (Historical, Safety, Design)
